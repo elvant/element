@@ -150,7 +150,8 @@
     prevYear,
     nextYear,
     prevMonth,
-    nextMonth
+    nextMonth,
+    changeYearMonthAndClampDate
   } from '../util';
   import Locale from 'element-ui/src/mixins/locale';
   import ElInput from 'element-ui/packages/input';
@@ -304,7 +305,7 @@
           this.date = modifyDate(this.date, this.year, month, 1);
           this.emit(this.date);
         } else {
-          this.date = modifyDate(this.date, this.year, month, this.monthDate);
+          this.date = changeYearMonthAndClampDate(this.date, this.year, month);
           // TODO: should emit intermediate value ??
           // this.emit(this.date);
           this.currentView = 'date';
@@ -325,7 +326,7 @@
           this.date = modifyDate(this.date, year, 0, 1);
           this.emit(this.date);
         } else {
-          this.date = modifyDate(this.date, year, this.month, this.monthDate);
+          this.date = changeYearMonthAndClampDate(this.date, year, this.month);
           // TODO: should emit intermediate value ??
           // this.emit(this.date, true);
           this.currentView = 'month';
@@ -333,8 +334,12 @@
       },
 
       changeToNow() {
-        this.date = new Date();
-        this.emit(this.date);
+        // NOTE: not a permanent solution
+        //       consider disable "now" button in the future
+        if (!this.disabledDate || !this.disabledDate(new Date())) {
+          this.date = new Date();
+          this.emit(this.date);
+        }
       },
 
       confirm() {
@@ -360,8 +365,8 @@
         document.body.removeEventListener('keydown', this.handleKeydown);
       },
 
-      handleKeydown(e) {
-        const keyCode = e.keyCode;
+      handleKeydown(event) {
+        const keyCode = event.keyCode;
         const list = [38, 40, 37, 39];
         if (this.visible && !this.timePickerVisible) {
           if (list.indexOf(keyCode) !== -1) {
@@ -369,7 +374,7 @@
             event.stopPropagation();
             event.preventDefault();
           }
-          if (keyCode === 13) {    // Enter
+          if (keyCode === 13) { // Enter
             this.$emit('pick', this.date, false);
           }
         }
@@ -431,8 +436,8 @@
       isValidValue(value) {
         return value && !isNaN(value) && (
           typeof this.disabledDate === 'function'
-          ? !this.disabledDate(value)
-          : true
+            ? !this.disabledDate(value)
+            : true
         );
       }
     },

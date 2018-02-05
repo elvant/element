@@ -1,4 +1,4 @@
-<script>
+﻿<script>
   export default {
     data() {
       return {
@@ -544,7 +544,7 @@ Customize how suggestions are displayed.
     methods: {
       querySearch(queryString, cb) {
         var links = this.links;
-        var results = queryString ? link.filter(this.createFilter(queryString)) : links;
+        var results = queryString ? links.filter(this.createFilter(queryString)) : links;
         // call callback function to return suggestion objects
         cb(results);
       },
@@ -664,6 +664,7 @@ Search data from server-side.
 |autofocus | same as `autofocus` in native input | boolean | — | false |
 |form | same as `form` in native input | string | — | — |
 | label | label text | string | — | — |
+| tabindex | input tabindex | string | - | - |
 
 ### Input slots
 
@@ -688,7 +689,7 @@ Attribute | Description | Type | Options | Default
 |----| ----| ----| ---- | -----|
 |placeholder| the placeholder of Autocomplete| string | — | — |
 |disabled | whether Autocomplete is disabled  | boolean | — | false|
-| valueKey | key name of the input suggestion object for display | string | — | value |
+| value-key | key name of the input suggestion object for display | string | — | value |
 |icon | icon name | string | — | — |
 |value | binding value | string | — | — |
 | debounce | debounce delay when typing, in milliseconds | number | — | 300 |

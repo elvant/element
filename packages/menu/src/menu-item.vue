@@ -14,7 +14,7 @@
     tabindex="-1"
   >
     <el-tooltip
-      v-if="$parent === rootMenu && rootMenu.collapse"
+      v-if="parentMenu.$options.componentName === 'ElMenu' && rootMenu.collapse"
       effect="dark"
       placement="right">
       <div slot="content"><slot name="title"></slot></div>
@@ -100,8 +100,10 @@
         this.$el.style.backgroundColor = this.backgroundColor;
       },
       handleClick() {
-        this.dispatch('ElMenu', 'item-click', this);
-        this.$emit('click', this);
+        if (!this.disabled) {
+          this.dispatch('ElMenu', 'item-click', this);
+          this.$emit('click', this);
+        };
       }
     },
     created() {
