@@ -23,6 +23,10 @@
     "dev:play": "npm run build:file && cross-env PLAY_ENV=true cooking watch -c build/cooking.demo.js -p",
     "dist": "npm run clean && npm run build:file && npm run lint && cooking build -c build/cooking.conf.js,build/cooking.common.js,build/cooking.component.js -p && npm run build:utils && npm run build:umd && npm run build:theme",
     "dist:all": "node build/bin/build-all.js && npm run build:theme",
+    "dist:style": "gulp --gulpfile build/build-style.js",
+    "dist:dev": "webpack --config build/webpack.dist.dev.config.js",
+    "dist:prod": "webpack --config build/webpack.dist.prod.config.js",
+    "dist:locale": "webpack --config build/webpack.dist.locale.config.js",
     "i18n": "node build/bin/i18n.js",
     "lint": "eslint src/**/* test/**/* packages/**/* build/**/* --quiet",
     "pub": "npm run bootstrap && sh build/git-release.sh && sh build/release.sh && node build/bin/gen-indices.js && sh build/deploy-faas.sh",
@@ -61,6 +65,7 @@
     "vue": "^2.5.2"
   },
   "devDependencies": {
+    "autoprefixer-loader": "^2.0.0",
     "algoliasearch": "^3.24.5",
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
@@ -70,6 +75,9 @@
     "babel-plugin-syntax-jsx": "^6.8.0",
     "babel-plugin-transform-vue-jsx": "^3.3.0",
     "babel-preset-es2015": "^6.14.0",
+    "babel-plugin-transform-runtime": "^6.12.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "babel-runtime": "^6.26.0",
     "chai": "^3.5.0",
     "cheerio": "^0.18.0",
     "chokidar": "^1.7.0",
@@ -77,6 +85,7 @@
     "cooking-lint": "^0.1.3",
     "cooking-vue2": "^0.3.3",
     "copy-webpack-plugin": "^4.1.1",
+    "compression-webpack-plugin": "^1.1.3",
     "coveralls": "^2.11.14",
     "cp-cli": "^1.0.2",
     "cross-env": "^3.1.3",
@@ -89,12 +98,15 @@
     "extract-text-webpack-plugin": "^3.0.1",
     "file-loader": "^1.1.5",
     "file-save": "^0.2.0",
+    "friendly-errors-webpack-plugin": "^1.6.1",
     "gh-pages": "^0.11.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cssmin": "^0.1.7",
+    "gulp-clean-css": "^2.0.13",
     "gulp-postcss": "^6.1.1",
     "gulp-sass": "^3.1.0",
+    "gulp-rename": "^1.2.2",
     "highlight.js": "^9.3.0",
     "html-loader": "^0.5.1",
     "html-webpack-plugin": "^2.30.1",
@@ -137,6 +149,7 @@
     "vue-template-es2015-compiler": "^1.6.0",
     "webpack": "^3.7.1",
     "webpack-dev-server": "^2.9.1",
-    "webpack-node-externals": "^1.6.0"
+    "webpack-node-externals": "^1.6.0",
+    "webpack-merge": "^3.0.0"
   }
 }
