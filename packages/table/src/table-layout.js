@@ -50,6 +50,7 @@ class TableLayout {
   }
 
   setHeight(value, prop = 'height') {
+    if (Vue.prototype.$isServer) return;
     const el = this.table.$el;
     if (typeof value === 'string' && /^\d+$/.test(value)) {
       value = Number(value);
@@ -79,7 +80,7 @@ class TableLayout {
 
     if (this.showHeader && !headerWrapper) return;
     const headerHeight = this.headerHeight = !this.showHeader ? 0 : headerWrapper.offsetHeight;
-    if (this.showHeader && headerWrapper.offsetWidth > 0 && headerHeight < 2) {
+    if (this.showHeader && headerWrapper.offsetWidth > 0 && (this.table.columns || []).length > 0 && headerHeight < 2) {
       return Vue.nextTick(() => this.updateElsHeight());
     }
     const tableHeight = this.tableHeight = this.table.$el.clientHeight;
@@ -111,6 +112,7 @@ class TableLayout {
   }
 
   updateColumnsWidth() {
+    if (Vue.prototype.$isServer) return;
     const fit = this.fit;
     const bodyWidth = this.table.$el.clientWidth;
     let bodyMinWidth = 0;
@@ -158,6 +160,7 @@ class TableLayout {
       }
 
       this.bodyWidth = Math.max(bodyMinWidth, bodyWidth);
+      this.table.resizeState.width = this.bodyWidth;
     } else {
       flattenColumns.forEach((column) => {
         if (!column.width && !column.minWidth) {

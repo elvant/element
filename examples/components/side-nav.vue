@@ -85,12 +85,12 @@
             margin: 8px 12px 12px 0;
 
             img {
-              width: 36px;
+              width: 42px;
             }
           }
 
-          &:nth-child(2) a img {
-            width: 42px;
+          &:first-child a img {
+            width: 36px;
           }
         }
       }
@@ -123,16 +123,21 @@
     :style="navStyle">
     <ul>
       <li class="nav-item sponsors">
-        <a>Sponsors</a>
+        <a>{{ lang === 'zh-CN' ? '赞助商' : 'Sponsors' }}</a>
         <ul class="pure-menu-list sub-nav">
-          <li class="nav-item">
+          <li class="nav-item" v-show="lang !== 'zh-CN'">
             <a href="https://tipe.io/?ref=element" target="_blank">
               <img src="~examples/assets/images/tipe.svg" alt="tipe.io">
             </a>
           </li>
           <li class="nav-item">
+            <a class="sponsor" href="https://www.duotai.net/?utm_source=element" target="_blank">
+              <img src="~examples/assets/images/duotai.svg" alt="duotai">
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="sponsor" href="https://www.duohui.cn/?utm_source=element&utm_medium=web&utm_campaign=element-index" target="_blank">
-              <img src="~examples/assets/images/duohui.svg" alt="tipe.io">
+              <img src="~examples/assets/images/duohui.svg" alt="duohui">
             </a>
           </li>
         </ul>
@@ -217,8 +222,11 @@
         style.opacity = this.isFade ? '0.5' : '1';
         return style;
       },
+      lang() {
+        return this.$route.meta.lang;
+      },
       langConfig() {
-        return compoLang.filter(config => config.lang === this.$route.meta.lang)[0]['nav'];
+        return compoLang.filter(config => config.lang === this.lang)[0]['nav'];
       }
     },
     methods: {
