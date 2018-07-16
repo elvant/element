@@ -1,5 +1,42 @@
 ## Changelog
 
+### 2.4.4
+
+*2018-07-13*
+
+- Corregido que se disparaba la validacion del Select después de reajustar el formulario, #11837
+- Corregida la posición incorrecta del slot Input `suffix`  cuando se usaba el slot `suffix` con el slot  `append`  , #11951
+- Corregido el clearable Input que muestraba el icono de borrado cuando era readonly, #11967
+- Arreglado el nodo Tree checked cuando estaba disabled, #11847
+- Corregido que  `default-checked-keys`  no funcionaba en Tree, #11971
+- Corregido que el `empty-text` no era visible cuando el nodo Tree se filtraba, #11971
+- Arreglada la posición de texto vacío sobredimensionado en Table, #11965
+- Corregido que la fila de la tabla no se modificado el resaltado cuando `current-row-key` era asignada a null, #11866
+- Arreglado que mostraba el filtro del dropdown cuando los filtros eran un array vacío, #11864
+- Corregido que el cambio de label de Radio no detenia propagacion de eventos, #11912
+
+### 2.4.3
+
+*2018-07-03*
+
+- Corregido `allow-drop` que no funcionaba correctamente cuando los nodos de árbol tenian una altura personalizada, #11797
+- Ahora puede pasar un parámetro al método `clearValidate` de Form, especificando qué resultados de validación de `FormItems` necesita borrar, #11821
+- Añadido el atributo `distinguishCancelAndClose` para MessageBox, #11831
+
+### 2.4.2
+
+*2018-06-26*
+
+- Ahora el `class-name` y el `label-class-name` de la tabla son reactivos, #11626
+- Arreglado que Table seguia resaltando la fila en la que se había hecho clic cuando  `highlight-current-row` era `false`, #11646
+- Corregido un error de estilo de ButtonGroup cuando sólo habia un botón `round` o `circle`, #11605
+- Arreglado estilo del tamaño de página del Select de Pagination, #11622
+- Corregido un error del método `open`  de los Menús cuando se cambiaba dinámicamente `collapse`, #11646
+- Añadidos los parámetros `activeName` y `oldActiveName` al gancho before-leave de Tabs, #11713
+- Arreglado el focus en Cascader después de hacer clic fuera, #11588
+- Arreglado que Cascader no se cerraba cuando se hacia clic en la opción estando `change-on-select` como `true`, #11623
+- Ahora la actualización del valor de Select programáticamente activará la validación de formulario, #11672
+
 ### 2.4.1
 
 *2018-06-08*

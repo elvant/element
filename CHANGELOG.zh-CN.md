@@ -1,5 +1,42 @@
 ## 更新日志
 
+### 2.4.4
+
+*2018-07-13*
+
+- 修复重置表单后触发 Select 组件校验问题，#11837
+- 修复 Input 组件 `suffix` 与 `append` 共存时样式错乱问题，#11951
+- 修复可清空的只读 Input 仍会显示清空图标的问题，#11967
+- 修复 Tree 节点禁用时仍可以选中的问题，#11847
+- 修复 Tree `default-checked-keys` 属性不生效的问题，#11971
+- 修复 Tree 在过滤节点时下 `empty-text` 不显示的问题，#11971
+- 修复 Table 的 `empty-text` 过长时的位置样式问题，#11965
+- 修复 Table 的 `current-row-key` 设置为 `null` 时高亮行不清除的问题，#11866
+- 修复当 `filters` 为空数组时显示过滤器下拉列表的问题，#11864
+- 修复 Radio 的 label 不阻止事件冒泡的问题，#11912
+
+### 2.4.3
+
+*2018-07-03*
+
+- 修复当自定义 Tree 节点高度时，`allow-drop` 不能正常工作的问题，#11797
+- 现在 Form 的 `clearValidate` 方法支持传入参数，指定需要清空校验结果的 FormItem，#11821
+- 新增 MessageBox 的 `distinguishCancelAndClose` 属性，#11831
+
+### 2.4.2
+
+*2018-06-26*
+
+- 修复 Table 的 `class-name` 和 `label-class-name` 属性不支持动态更新的问题，#11626
+- 修复 Table 在 `highlight-current-row` 为 `false` 时点击行也会触发高亮的问题，#11691 #11563
+- 修复 ButtonGroup 中只有一个 `round` 或 `circle` 的 Button 时的样式错误，#11605
+- 修复在某些情况下 Pagination 的条目数选择器的样式错误，#11622
+- 修复 Menu 的 `collapse` 属性变化后无法使用 `open` 方法的问题，#11646
+- Tabs 的 `before-leave` 钩子添加了 `activeName` 和 `oldActiveName` 参数，#11713
+- 修复 Cascader 关闭后的聚焦问题，#11588
+- 修复 Cascader 在 `change-on-select` 状态下点击选项不关闭的问题，#11623
+- 现在通过代码改变 Select 的值后会触发表单校验，与 Input 行为一致，#11672
+
 ### 2.4.1
 
 *2018-06-08*

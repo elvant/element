@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import { MessageType } from './message'
 
-export type MessageBoxCloseAction = 'confirm' | 'cancel'
+export type MessageBoxCloseAction = 'confirm' | 'cancel' | 'close'
 export type MessageBoxData = MessageBoxCloseAction | MessageBoxInputData
 
 export interface MessageBoxInputData {
@@ -72,6 +72,9 @@ export interface ElMessageBoxOptions {
 
   /** Whether to show a confirm button */
   showConfirmButton?: boolean
+
+  /** Whether to show a close button */
+  showClose?: boolean
 
   /** Text content of cancel button */
   cancelButtonText?: string

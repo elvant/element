@@ -1,5 +1,42 @@
 ## Changelog
 
+### 2.4.4
+
+*2018-07-13*
+
+- Fixed triggering Select validation after Form resetting, #11837
+- Fixed wrong position of Input `suffix` slot when `suffix` slot with `append` slot, #11951
+- Fixed clearable Input still displaying the clear icon when readonly, #11967
+- Fixed Tree node checked when it's disabled, #11847
+- Fixed Tree's `default-checked-keys` not working, #11971
+- Fixed `empty-text` not visible when Tree node filtered, #11971
+- Fixed the position of oversized `empty-text` in Table, #11965
+- Fixed Table row not be unhighlighted when `current-row-key` is assigned to `null`, #11866
+- Fixed showing filter dropdown when `filters` is an empty array, #11864
+- Fixed Radio's label does not stop event propagation, #11912
+
+### 2.4.3
+
+*2018-07-03*
+
+- Fixed `allow-drop` not working properly when Tree nodes have a custom height, #11797
+- Now you can pass a parameter to the `clearValidate` method of Form, specifying which FormItems' validation results need to be cleared, #11821
+- Added `distinguishCancelAndClose` attribute for MessageBox, #11831
+
+### 2.4.2
+
+*2018-06-26*
+
+- Now `class-name` and `label-class-name` of Table are reactive, #11626
+- Fixed Table still highlighting clicked row when `highlight-current-row` is `false`, #11646
+- Fixed a style bug of ButtonGroup when it has only one `round` or `circle` Button, #11605
+- Fixed style of page size Select of Pagination, #11622
+- Fixed Menu's `open` method error when `collapse` is dynamically changed, #11646
+- Added `activeName` and `oldActiveName` parameters to the before-leave hook of Tabs, #11713
+- Fixed Cascader focused after outside clicked, #11588
+- Fixed Cascader not closing when option is clicked when `change-on-select` is true, #11623
+- Now updating Select's value programmatically will trigger form validation, #11672
+
 ### 2.4.1
 
 *2018-06-08*
