@@ -33,11 +33,20 @@
       }
     }
 
+    .main-container {
+      padding: 0 170px 144px 64px;
+      min-height: 500px;
+      overflow: hidden;
+      border-left: 1px solid #ebedf0;
+      margin-left: -1px;
+    }
+
     .side-nav {
       height: 100%;
       padding-top: 50px;
       padding-bottom: 50px;
       padding-right: 0;
+      border-right: 1px solid #e8e8e8;
 
       & > ul {
         padding-bottom: 50px;
@@ -45,7 +54,7 @@
     }
 
     .page-component__content {
-      padding-left: 270px;
+      /* padding-left: 270px; */
       padding-bottom: 100px;
       box-sizing: border-box;
     }
@@ -72,6 +81,8 @@
 
           td, th {
             border-bottom: 1px solid #d8d8d8;
+            border: 1px solid #ebedf0;
+            border-color: #e8e8e8;
             padding: 15px;
             max-width: 250px;
           }
@@ -81,6 +92,8 @@
             white-space: nowrap;
             color: #666;
             font-weight: normal;
+            background: rgba(0,0,0,.02);
+
           }
 
           td {
@@ -144,6 +157,11 @@
         padding-top: 0;
         padding-left: 50px;
       }
+
+      .main-container {
+        padding: 15px;
+      }
+
       .page-component__content {
         padding-left: 10px;
         padding-right: 10px;
@@ -162,15 +180,23 @@
   }
 </style>
 <template>
-  <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
+  <!-- <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
+  </el-scrollbar> -->
   <div class="page-container page-component">
-    <el-scrollbar class="page-component__nav">
-      <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
-    </el-scrollbar>
+
+<el-row>
+  <el-col class="main-menu" :xs="24" :sm="24" :md="6" :lg="5" :xl="5">
+    <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
+  </el-col>
+  <el-col class="main-container" :xs="24" :sm="24" :md="18" :lg="19" :xl="19">
     <div class="page-component__content">
       <router-view class="content"></router-view>
       <footer-nav></footer-nav>
     </div>
+  </el-col>
+</el-row>
+    <!-- <el-scrollbar class="page-component__nav">
+    </el-scrollbar> -->
     <transition name="back-top-fade">
       <div
         class="page-component-up"
@@ -183,7 +209,6 @@
       </div>
     </transition>
   </div>
-  </el-scrollbar>
 </template>
 <script>
   import bus from '../../bus';
@@ -208,7 +233,7 @@
         // 触发伪滚动条更新
         this.componentScrollBox.scrollTop = 0;
         this.$nextTick(() => {
-          this.componentScrollBar.update();
+          // this.componentScrollBar.update();
         });
       }
     },
@@ -271,16 +296,16 @@
       });
     },
     mounted() {
-      this.componentScrollBar = this.$refs.componentScrollBar;
-      this.componentScrollBox = this.componentScrollBar.$el.querySelector('.el-scrollbar__wrap');
+      // this.componentScrollBar = this.$refs.componentScrollBar;
+      this.componentScrollBox = document.querySelector('body');
       this.throttledScrollHandler = throttle(300, this.handleScroll);
       this.componentScrollBox.addEventListener('scroll', this.throttledScrollHandler);
       this.renderAnchorHref();
       this.goAnchor();
-      document.body.classList.add('is-component');
+      // document.body.classList.add('is-component');
     },
     destroyed() {
-      document.body.classList.remove('is-component');
+      // document.body.classList.remove('is-component');
     },
     beforeDestroy() {
       this.componentScrollBox.removeEventListener('scroll', this.throttledScrollHandler);

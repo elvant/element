@@ -83,7 +83,7 @@
 
   .container,
   .page-container {
-    width: 1140px;
+    /* width: 1140px; */
     padding: 0;
     margin: 0 auto;
   }
@@ -212,7 +212,7 @@
         return this.$route.path.split('/')[1] || 'zh-CN';
       },
       isComponent() {
-        return /^component-/.test(this.$route.name || '');
+        return false && /^component-/.test(this.$route.name || '');
       }
     },
 
@@ -234,7 +234,7 @@
         if (href.indexOf('element-cn') > -1 || href.indexOf('element.faas') > -1 || preferGithub) return;
         setTimeout(() => {
           if (this.lang !== 'zh-CN') return;
-          this.$confirm('建议大陆用户访问部署在国内的站点，是否跳转？', '提示')
+          this.$confirm('建议用户访问部署在国内的站点，是否跳转？', '提示')
             .then(() => {
               location.href = location.href
                 .replace('https:', 'http:')

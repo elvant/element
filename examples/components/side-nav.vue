@@ -10,6 +10,7 @@
 
     li {
       list-style: none;
+      padding-left: 40px;
     }
 
     ul {

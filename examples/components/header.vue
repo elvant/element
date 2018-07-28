@@ -13,6 +13,7 @@
     line-height: @height;
     z-index: 100;
     position: relative;
+    box-shadow: 0 2px 8px #f0f1f2;
 
     .container {
       height: 100%;
@@ -28,6 +29,7 @@
       float: left;
       font-size: 32px;
       font-weight: normal;
+      margin-left: 40px;
 
       a {
         color: #333;
@@ -57,6 +59,7 @@
       @utils-clearfix;
       padding: 0;
       margin: 0;
+      margin-right: 40px;
     }
 
     .nav-gap {
@@ -265,7 +268,7 @@
           <!-- logo -->
           <slot>
             <img
-              src="../assets/images/element-logo.svg"
+              src="../assets/images/element-logo.png"
               alt="element-logo"
               class="nav-logo">
             <img

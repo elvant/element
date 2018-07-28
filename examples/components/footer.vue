@@ -38,6 +38,16 @@
         <a :href="gitterLink" target="_blank">
           <i class="doc-icon-gitter elementdoc"></i>
         </a>
+        <h4>Vant: Ant Design theme</h4>
+
+        
+        <a href="https://github.com/icai/theme-antd" target="_blank">
+          <i class="doc-icon-github elementdoc"></i>
+        </a>
+
+        <a href="https://github.com/icai" target="_blank">
+          <i class="doc-icon-github elementdoc" style="margin-right:0" ></i>
+        </a>
       </div>
     </div>
   </footer>

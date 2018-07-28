@@ -2,6 +2,7 @@
   .page-resource {
     padding-top: 55px;
     box-sizing: border-box;
+    padding-left: 40px;
     
     .resource-placeholder {
       margin: 50px auto 100px;
@@ -28,6 +29,7 @@
   }
   .cards {
     margin: 35px auto 110px;
+    overflow: hidden;
 
     .container {
       @utils-clearfix;

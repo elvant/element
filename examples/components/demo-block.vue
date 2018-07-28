@@ -240,6 +240,7 @@
         this.fixedControl = bottom > document.documentElement.clientHeight &&
           top + 44 <= document.documentElement.clientHeight;
         this.$refs.control.style.left = this.fixedControl ? `${ left }px` : '0';
+        this.$refs.control.style.width = this.fixedControl ? `${this.$refs.control.parentNode.clientWidth}px` : '';
       },
 
       removeScrollHandler() {
@@ -291,7 +292,7 @@
           return;
         }
         setTimeout(() => {
-          this.scrollParent = document.querySelector('.page-component__scroll > .el-scrollbar__wrap');
+          this.scrollParent = document.querySelector('body');
           this.scrollParent && this.scrollParent.addEventListener('scroll', this.scrollHandler);
           this.scrollHandler();
         }, 200);
