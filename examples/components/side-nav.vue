@@ -126,7 +126,12 @@
       <li class="nav-item sponsors">
         <a>{{ lang === 'zh-CN' ? '赞助商' : 'Sponsors' }}</a>
         <ul class="pure-menu-list sub-nav">
-          <li class="nav-item" v-show="lang !== 'zh-CN'">
+          <li class="nav-item">
+            <a class="sponsor" href="http://docs.w3cub.com/?utm_source=vant" target="_blank">
+              <img src="https://avatars0.githubusercontent.com/u/24860109?s=90" alt="w3cub">
+            </a>
+          </li>
+          <!-- <li class="nav-item" v-show="lang !== 'zh-CN'">
             <a href="https://tipe.io/?ref=element" target="_blank">
               <img src="~examples/assets/images/tipe.svg" alt="tipe.io">
             </a>
@@ -140,7 +145,7 @@
             <a class="sponsor" href="https://www.duohui.cn/?utm_source=element&utm_medium=web&utm_campaign=element-index" target="_blank">
               <img src="~examples/assets/images/duohui.svg" alt="duohui">
             </a>
-          </li>
+          </li> -->
         </ul>
       </li>
       <li
