@@ -7,7 +7,7 @@
 
 <style>
   .theme-picker {
-    height: 80px;
+    height: 64px;
     display: inline-block;
     @utils-vertical-center;
   }

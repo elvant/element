@@ -1,10 +1,10 @@
 <style scoped>
   .headerWrapper {
-    height: 80px;
+    height: 64px;
   }
 
   .header {
-    height: 80px;
+    height: 64px;
     background-color: #fff;
     color: #fff;
     top: 0;
@@ -54,7 +54,7 @@
     .nav {
       float: right;
       height: 100%;
-      line-height: 80px;
+      line-height: 64px;
       background: transparent;
       @utils-clearfix;
       padding: 0;
@@ -65,7 +65,7 @@
     .nav-gap {
       position: relative;
       width: 1px;
-      height: 80px;
+      height: 64px;
       padding: 0 20px;
 
       &::before {

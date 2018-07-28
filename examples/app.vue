@@ -76,7 +76,7 @@
 
   .main-cnt {
     margin-top: -80px;
-    padding: 80px 0 340px;
+    padding: 100px 0 340px;
     box-sizing: border-box;
     min-height: 100%;
   }

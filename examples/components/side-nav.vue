@@ -4,19 +4,20 @@
     box-sizing: border-box;
     padding-right: 30px;
     transition: opacity .3s;
+    font-family: Monospaced Number,Chinese Quote,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Helvetica,Arial,sans-serif;
     &.is-fade {
       transition: opacity 3s;
     }
 
     li {
       list-style: none;
-      padding-left: 40px;
+     
     }
 
     ul {
       padding: 0;
       margin: 0;
-      overflow: hidden;
+      /* overflow: hidden; */
     }
     
     > ul > .nav-item > a {
@@ -46,6 +47,11 @@
         }
       }
 
+      .name-1 {
+        font-size: 12px;
+        font-weight: 400;
+        opacity: .67;
+      }
       .nav-item {
         a {
           display: block;
@@ -64,7 +70,7 @@
           }
         }
       }
-  
+
       &.sponsors {
         & > .sub-nav {
           margin-top: -10px;
@@ -96,12 +102,34 @@
         }
       }
     }
-
+    .nav-item {
+      a {
+          padding-left: 40px;
+      }
+      .nav-item {
+        a {
+          padding-left: 80px;
+        }
+      }
+    }
+    .nav-item.active {
+      position: relative;
+      background-color: #e6f7ff;
+      &::after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: 0;
+        bottom: 0;
+        border-right: 3px solid #1890ff;
+      }
+    }
     .nav-group__title {
       font-size: 12px;
       color: #999;
       line-height: 26px;
       margin-top: 15px;
+      padding-left: 56px;
     }
 
     #code-sponsor-widget {
@@ -183,17 +211,16 @@
             >
             <div class="nav-group__title" @click="expandMenu">{{group.groupName}}</div>
             <ul class="pure-menu-list">
-              <li
-                class="nav-item"
-                v-for="(navItem, key) in group.list"
-                v-if="!navItem.disabled"
-                :key="key">
-                <router-link
-                  active-class="active"
-                  :to="base + navItem.path"
-                  exact
-                  v-text="navItem.title"></router-link>
-              </li>
+              <router-link tag="li" class="nav-item"
+              v-for="(navItem, key) in group.list"
+              v-if="!navItem.disabled"
+              :key="key"
+                active-class="active"
+                :to="base + navItem.path"
+                exact
+                >
+                <a v-html="wrapClass(navItem.title)"></a>
+              </router-link>
             </ul>
           </div>
         </template>
@@ -247,6 +274,10 @@
       }
     },
     methods: {
+      wrapClass(v){
+        let g = v.split(' ').map((item,index) => `<span class="name-${index}">${item}</span>`).join(' ')
+        return g
+      },
       handleResize() {
         this.isSmallScreen = document.documentElement.clientWidth < 768;
         this.handlePathChange();
