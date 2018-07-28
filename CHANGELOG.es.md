@@ -1,5 +1,18 @@
 ## Changelog
 
+### 2.4.5
+
+*2018-07-26*
+
+- Se ha corregido en Table que `class-name` no funcionaba para las columnas `expand`, #12006
+- Se ha añadido el método `toggleAllSelection` para Table, #12047
+- Corregida la posición incorrecta del `suffix slot` cuando Input contiene Select, #12108 
+- Corregido que el `line-height` de Option no se establecia, #12120
+- Corregido que TimeSelect con valor por defecto `null` no podia ser asignado después de ejecutar `resetField`, #12010
+- Arreglado el evento `keydown` que cuando no era una tecla de flecha no funciona en Tree, #12008
+- Corregido nodo padre checked en modo lazy, #12106
+- Añadido el parámetro `includeHalfChecked` para getCheckedNodes de Tree, #12014
+
 ### 2.4.4
 
 *2018-07-13*
