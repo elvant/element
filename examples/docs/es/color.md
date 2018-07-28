@@ -27,20 +27,20 @@
     }
   }
   .bg-blue {
-    background-color: #409EFF;
+    background-color: #1890ff;
   }
 
   .bg-success {
-    background-color: #13CE66;
+    background-color: #52c41a;
   }
   .bg-warning {
-    background-color: #f7ba2a;
+    background-color: #FFAB3F;
   }
   .bg-danger {
-    background-color: #ff4949;
+    background-color: #FF0139;
   }
   .bg-info {
-    background-color: #909399;
+    background-color: #1A8FE2;
   }
 
   .bg-text-primary {
@@ -83,7 +83,7 @@ El color principal de Element es el azul brillante y amigable.
 
 <el-row :gutter="12">
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-blue">Azul<div class="value">#409EFF</div></div>
+    <div class="demo-color-box bg-blue">Azul<div class="value">#1890ff</div></div>
   </el-col>
 </el-row>
 
@@ -93,16 +93,16 @@ Además del color principal, se necesitan utilizar distintos colores para difere
 
 <el-row :gutter="12">
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-success">Éxito<div class="value">#67C23A</div></div>
+    <div class="demo-color-box bg-success">Éxito<div class="value">#52c41a</div></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-warning">Precaución<div class="value">#E6A23C</div></div>
+    <div class="demo-color-box bg-warning">Precaución<div class="value">#FFAB3F</div></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-danger">Peligro<div class="value">#F56C6C</div></div>
+    <div class="demo-color-box bg-danger">Peligro<div class="value">#FF0139</div></div>
   </el-col>
   <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-info">Info<div class="value">#909399</div></div>
+    <div class="demo-color-box bg-info">Info<div class="value">#FF0139</div></div>
   </el-col>
 </el-row>
 

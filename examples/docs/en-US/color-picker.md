@@ -2,10 +2,10 @@
   export default {
     data() {
       return {
-        color1: '#409EFF',
+        color1: '#1890ff',
         color2: null,
         color3: 'rgba(19, 206, 102, 0.8)',
-        color4: '#409EFF',
+        color4: '#1890ff',
         color5: 'rgba(255, 69, 0, 0.68)',
         predefineColors: [
           '#ff4500',
@@ -78,7 +78,7 @@ ColorPicker is a color selector supporting multiple color formats.
   export default {
     data() {
       return {
-        color1: '#409EFF',
+        color1: '#1890ff',
         color2: null
       }
     }
@@ -157,7 +157,7 @@ ColorPicker is a color selector supporting multiple color formats.
   export default {
     data() {
       return {
-        color4: '#409EFF'
+        color4: '#1890ff'
       }
     }
   };

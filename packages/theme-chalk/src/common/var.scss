@@ -53,7 +53,7 @@ $--link-hover-color: $--color-primary !default;
 /* Background
 -------------------------- */
 $--background-color-base: #f5f7fa !default;
-
+$--background-color-hover: #e6f7ff !default;
 /* Border
 -------------------------- */
 $--border-width-base: 1px !default;
@@ -224,10 +224,9 @@ $--select-option-color: $--color-text-regular !default;
 $--select-option-disabled-color: $--color-text-placeholder !default;
 $--select-option-disabled-background: $--color-white !default;
 $--select-option-height: 34px !default;
-$--select-option-hover-background: #e6f7ff !default;
-// $--background-color-base
+$--select-option-hover-background: $--background-color-hover !default;
 $--select-option-selected: $--color-primary !default;
-$--select-option-selected-hover: $--background-color-base !default;
+$--select-option-selected-hover: $--background-color-hover !default;
 
 $--select-group-color: $--color-info !default;
 $--select-group-height: 30px !default;
@@ -480,7 +479,7 @@ $--table-border-color: $--border-color-lighter !default;
 $--table-border: 1px solid $--table-border-color !default;
 $--table-text-color: $--color-text-regular !default;
 $--table-header-color: $--color-text-secondary !default;
-$--table-row-hover-background: $--background-color-base !default;
+$--table-row-hover-background: $--background-color-hover !default;
 $--table-current-row-background: $--color-primary-light-9 !default;
 $--table-header-background: $--color-white !default;
 $--table-footer-background: $--color-text-placeholder !default;
@@ -551,7 +550,7 @@ $--tag-danger-color: $--color-danger !default;
 
 /* Tree
 -------------------------- */
-$--tree-node-hover-color: $--background-color-base !default;
+$--tree-node-hover-color: $--background-color-hover !default;
 $--tree-text-color: $--color-text-regular !default;
 $--tree-expand-icon-color: $--color-text-placeholder !default;
 
