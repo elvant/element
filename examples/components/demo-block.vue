@@ -292,7 +292,7 @@
           return;
         }
         setTimeout(() => {
-          this.scrollParent = document.querySelector('body');
+          this.scrollParent = window;
           this.scrollParent && this.scrollParent.addEventListener('scroll', this.scrollHandler);
           this.scrollHandler();
         }, 200);

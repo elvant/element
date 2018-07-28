@@ -277,7 +277,7 @@
           this.showHeader = true;
         }
         if (!this.navFaded) {
-          bus.$emit('fadeNav');
+          // bus.$emit('fadeNav');
         }
         this.scrollTop = scrollTop;
       }
@@ -297,9 +297,9 @@
     },
     mounted() {
       // this.componentScrollBar = this.$refs.componentScrollBar;
-      this.componentScrollBox = document.querySelector('body');
+      this.componentScrollBox = document.documentElement;
       this.throttledScrollHandler = throttle(300, this.handleScroll);
-      this.componentScrollBox.addEventListener('scroll', this.throttledScrollHandler);
+      window.addEventListener('scroll', this.throttledScrollHandler);
       this.renderAnchorHref();
       this.goAnchor();
       // document.body.classList.add('is-component');
@@ -308,7 +308,7 @@
       // document.body.classList.remove('is-component');
     },
     beforeDestroy() {
-      this.componentScrollBox.removeEventListener('scroll', this.throttledScrollHandler);
+      window.removeEventListener('scroll', this.throttledScrollHandler);
     }
   };
 </script>
