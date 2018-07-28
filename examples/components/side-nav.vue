@@ -276,9 +276,10 @@
       }
     },
     methods: {
-      wrapClass(v){
-        let g = v.split(' ').map((item,index) => `<span class="name-${index}">${item}</span>`).join(' ')
-        return g
+      wrapClass(v) {
+        return (v || '').split(' ').map((item, index) => {
+          return `<span class="name-${index}">${item}</span>`;
+        }).join(' ');
       },
       handleResize() {
         this.isSmallScreen = document.documentElement.clientWidth < 768;

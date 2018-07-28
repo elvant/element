@@ -1,12 +1,12 @@
 <style>
   .el-header, .el-footer {
-    background-color: #B3C0D1;
-    color: #333;
+    background-color: #7dbcea;
+    color: #fff;
     line-height: 60px;
   }
 
   .el-aside {
-    color: #333;
+    color: #fff;
   }
 
   #disenos-comunes + .demo-container {
@@ -15,14 +15,14 @@
     }
     
     .el-aside {
-      background-color: #D3DCE6;
+      background-color: #3ba0e9;
       text-align: center;
       line-height: 200px;
     }
     
     .el-main {
-      background-color: #E9EEF3;
-      color: #333;
+      background-color: rgba(16, 142, 233, 1);
+      color: #fff;
       text-align: center;
       line-height: 160px;
     }
