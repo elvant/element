@@ -17,7 +17,9 @@
     ul {
       padding: 0;
       margin: 0;
-      /* overflow: hidden; */
+    }
+    .pure-menu-list {
+      overflow: hidden;
     }
     
     > ul > .nav-item > a {
