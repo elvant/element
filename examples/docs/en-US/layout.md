@@ -361,6 +361,9 @@ The classes are:
 - `hidden-lg-and-down` - hide when on large viewports and down
 - `hidden-lg-and-up` - hide when on large viewports and up
 - `hidden-xl-only` - hide when on extra large viewports only
+- `hidden-xl-and-down` - hide when on extra large viewports and down
+- `hidden-xl-and-up` - hide when on extra large viewports and up
+- `hidden-xxl-only` - hide when on double large viewports only
 
 ### Row Attributes
 | Attribute      | Description          | Type      | Accepted Values       | Default  |
@@ -378,11 +381,12 @@ The classes are:
 | offset | number of spacing on the left side of the grid | number | — | 0 |
 | push |  number of columns that grid moves to the right | number | — | 0 |
 | pull |  number of columns that grid moves to the left | number | — | 0 |
-| xs | `<768px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
-| sm | `≥768px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
-| md | `≥992px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
-| lg | `≥1200px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
-| xl | `≥1920px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
+| xs | `<576px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
+| sm | `≥576px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
+| md | `≥768px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
+| lg | `≥992px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
+| xl | `≥1200px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
+| xxl | `≥1600px` Responsive columns or column props object | number/object (e.g. {span: 4, offset: 4}) | — | — |
 | tag | custom element tag | string | * | div |
 
 

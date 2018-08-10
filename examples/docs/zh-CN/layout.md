@@ -360,6 +360,9 @@ import 'element-ui/lib/theme-chalk/display.css';
 - `hidden-lg-and-down` - 当视口在 `lg` 及以下尺寸时隐藏
 - `hidden-lg-and-up` - 当视口在 `lg` 及以上尺寸时隐藏
 - `hidden-xl-only` - 当视口在 `xl` 尺寸时隐藏
+- `hidden-xl-and-down` - 当视口在 `xl` 及以下尺寸时隐藏
+- `hidden-xl-and-up` - 当视口在 `xl` 及以上尺寸时隐藏
+- `hidden-xxl-only` - 当视口在 `xxl` 尺寸时隐藏
 
 ### Row Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
@@ -377,9 +380,10 @@ import 'element-ui/lib/theme-chalk/display.css';
 | offset | 栅格左侧的间隔格数 | number | — | 0 |
 | push |  栅格向右移动格数 | number | — | 0 |
 | pull |  栅格向左移动格数 | number | — | 0 |
-| xs | `<768px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
-| sm | `≥768px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
-| md | `≥992px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
-| lg | `≥1200px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
-| xl | `≥1920px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
+| xs | `<576px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
+| sm | `≥576px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
+| md | `≥768px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
+| lg | `≥992px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
+| xl | `≥1200px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
+| xxl | `≥1600px` 响应式栅格数或者栅格属性对象 | number/object (例如： {span: 4, offset: 4}) | — | — |
 | tag | 自定义元素标签 | string | * | div |

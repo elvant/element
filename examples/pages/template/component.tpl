@@ -185,10 +185,10 @@
   <div class="page-container page-component">
 
 <el-row>
-  <el-col class="main-menu" :xs="24" :sm="24" :md="6" :lg="5" :xl="5">
+  <el-col class="main-menu" :xs="24" :sm="24" :md="24" :lg="6" :xl="5" :xxl="4" >
     <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
   </el-col>
-  <el-col class="main-container" :xs="24" :sm="24" :md="18" :lg="19" :xl="19">
+  <el-col class="main-container" :xs="24" :sm="24" :md="24" :lg="18" :xl="19" :xxl="20">
     <div class="page-component__content">
       <router-view class="content"></router-view>
       <footer-nav></footer-nav>

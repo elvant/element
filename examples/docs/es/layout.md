@@ -360,7 +360,10 @@ Las clases son:
 - `hidden-lg-only` - ocultos en viewports grandes solamente 
 - `hidden-lg-and-down` - ocultos en viewports grandes y menores
 - `hidden-lg-and-up` - ocultos en viewports grandes y superiores
-- `hidden-xl-only` - oculto en viewports extra grandes solamente
+- `hidden-xl-only` - ocultos en viewports extra grandes solamente 
+- `hidden-xl-and-down` - ocultos en viewports extra grandes y menores
+- `hidden-xl-and-up` - ocultos en viewports extra grandes y superiores
+- `hidden-xxl-only` - oculto en viewports doble extra grandes solamente
 
 ### Atributos Row 
 
@@ -380,11 +383,12 @@ Las clases son:
 | offset    | especific espacio en el lado izquierdo de la grill | number                                   | —                 | 0                 |
 | push      | número de columnas que la grilla se mueve hacia la derecha | number                                   | —                 | 0                 |
 | pull      | número de columnas que la grilla se mueve hacia la izquierda | number                                   | —                 | 0                 |
-| xs        | `<768px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
-| sm        | `≥768px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
-| md        | `≥992px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
-| lg        | `≥1200px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
-| xl        | `≥1920px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
+| xs        | `<576px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
+| sm        | `≥576px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
+| md        | `≥768px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
+| lg        | `≥992px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
+| xl        | `≥1200px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
+| xxl        | `≥1600px` Columnas responsive u objeto con propiedades de la columna | number/object (e.g. {span: 4, offset: 4}) | —                 | —                 |
 | tag       | tag de elemento propio                   | string                                   | *                 | div               |
 
 
