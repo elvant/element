@@ -2,12 +2,12 @@
   <transition name="el-alert-fade">
     <div
       class="el-alert"
-      :class="[typeClass, center ? 'is-center' : '']"
+      :class="[typeClass, center ? 'is-center' : '', banner ? 'el-alert--banner' : '']"
       v-show="visible"
       role="alert"
     >
       <i class="el-alert__icon" :class="[ iconClass, isBigIcon ]" v-if="showIcon"></i>
-      <div class="el-alert__content">
+      <div class="el-alert__content" :class="[ isBigPadding ]" >
         <span class="el-alert__title" :class="[ isBoldTitle ]" v-if="title">{{ title }}</span>
         <slot>
           <p class="el-alert__description" v-if="description">{{ description }}</p>
@@ -20,10 +20,19 @@
 
 <script type="text/babel">
   const TYPE_CLASSES_MAP = {
-    'success': 'el-icon-success',
-    'warning': 'el-icon-warning',
-    'error': 'el-icon-error'
+    success: 'success anticon-check-circle',
+    info: 'info anticon-info-circle',
+    warning: 'warning anticon-exclamation-circle',
+    error: 'error anticon-cross-circle'
   };
+
+  const TYPE_CLASSES_MAP2 = {
+    success: 'success anticon-check-circle-o',
+    info: 'info anticon-info-circle-o',
+    warning: 'warning anticon-exclamation-circle-o',
+    error: 'error anticon-cross-circle-o'
+  };
+
   export default {
     name: 'ElAlert',
 
@@ -49,6 +58,10 @@
         type: String,
         default: ''
       },
+      banner: {
+        type: Boolean,
+        default: false
+      },
       showIcon: Boolean,
       center: Boolean
     },
@@ -72,13 +85,15 @@
       },
 
       iconClass() {
-        return TYPE_CLASSES_MAP[this.type] || 'el-icon-info';
+        return `el-icon-${ this.description || this.$slots.default ? TYPE_CLASSES_MAP2[this.type] : TYPE_CLASSES_MAP[this.type] }`;
       },
 
       isBigIcon() {
         return this.description || this.$slots.default ? 'is-big' : '';
       },
-
+      isBigPadding() {
+        return this.showIcon && (this.description || this.$slots.default) ? 'is-with-desc-icon' : '';
+      },
       isBoldTitle() {
         return this.description || this.$slots.default ? 'is-bold' : '';
       }

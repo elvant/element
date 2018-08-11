@@ -199,6 +199,41 @@
 ```
 :::
 
+### 顶部公告
+
+页面顶部通告形式，默认有图标且 `type` 为 'info'
+
+:::demo
+```html
+<template>
+  <el-alert
+    title="Warning text"
+    type="warning"
+    banner
+    show-icon>
+  </el-alert>
+  <el-alert
+    title="消息提示的文案"
+    banner
+    show-icon>
+  </el-alert>
+  <el-alert
+    title="成功提示的文案"
+    type="success"
+    closable
+    banner>
+  </el-alert>
+  <el-alert
+    title="错误提示的文案"
+    type="error"
+    banner
+    show-icon>
+  </el-alert>
+</template>
+```
+:::
+
+
 ### Attributes
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
@@ -209,6 +244,7 @@
 | center | 文字是否居中 | boolean | — | true |
 | close-text | 关闭按钮自定义文本 | string | — | — |
 | show-icon | 是否显示图标 | boolean | — | false |
+| banner | 是否用作顶部公告 | boolean | — | false |
 
 
 ### Events

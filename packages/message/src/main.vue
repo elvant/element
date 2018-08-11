@@ -25,10 +25,10 @@
 
 <script type="text/babel">
   const typeMap = {
-    success: 'success',
-    info: 'info',
-    warning: 'warning',
-    error: 'error'
+    success: 'success anticon-check-circle',
+    info: 'info anticon-info-circle',
+    warning: 'warning anticon-exclamation-circle',
+    error: 'error anticon-cross-circle'
   };
 
   export default {

@@ -118,7 +118,7 @@ Displaying an icon improves readability.
 ```
 :::
 
-## Centered text
+### Centered text
 
 Use the `center` attribute to center the text.
 
@@ -205,6 +205,40 @@ Description includes a message with more detailed information.
 ```
 :::
 
+### Banner
+
+Display Alert as a banner at top of page.
+
+:::demo
+```html
+<template>
+  <el-alert
+    title="Warning text"
+    type="warning"
+    banner
+    show-icon>
+  </el-alert>
+  <el-alert
+    title="more text description"
+    banner
+    show-icon>
+  </el-alert>
+  <el-alert
+    title="more text description"
+    type="success"
+    closable
+    banner>
+  </el-alert>
+  <el-alert
+    title="more text description"
+    type="error"
+    banner
+    show-icon>
+  </el-alert>
+</template>
+```
+:::
+
 ### Attributes
 | Attribute      | Description          | Type      | Accepted Values       | Default  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
@@ -215,6 +249,7 @@ Description includes a message with more detailed information.
 | center | whether to center the text | boolean | — | false |
 | close-text | customized close button text | string | — | — |
 | show-icon | if a type icon is displayed | boolean | — | false |
+| banner | whether to show as banner | boolean | — | false |
 
 
 ### Events

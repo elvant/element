@@ -207,6 +207,41 @@ Descripción incluye un mensaje con información más detallada.
 ```
 :::
 
+### Bandera
+
+Mostrar alerta como un banner en la parte superior de la página.
+
+:::demo
+```html
+<template>
+  <el-alert
+    title="Warning text"
+    type="warning"
+    banner
+    show-icon>
+  </el-alert>
+  <el-alert
+    title="more text description"
+    banner
+    show-icon>
+  </el-alert>
+  <el-alert
+    title="more text description"
+    type="success"
+    closable
+    banner>
+  </el-alert>
+  <el-alert
+    title="more text description"
+    type="error"
+    banner
+    show-icon>
+  </el-alert>
+</template>
+```
+:::
+
+
 ### Atributos
 | Atributo    | Descripción                              | Tipo    | Valores aceptados          | Por defecto |
 | ----------- | ---------------------------------------- | ------- | -------------------------- | ----------- |
@@ -217,6 +252,7 @@ Descripción incluye un mensaje con información más detallada.
 | center      | si el texto debe estar centrado          | boolean | —                          | false       |
 | close-text  | texto de cerrado personalizado           | string  | —                          | —           |
 | show-icon   | si un icono del tipo de alerta se debe mostrar | boolean | —                          | false       |
+| banner   | si mostrar como pancarta | boolean | —                          | false       |
 
 
 ### Eventos

@@ -33,10 +33,10 @@
 
 <script type="text/babel">
   let typeMap = {
-    success: 'success',
-    info: 'info',
-    warning: 'warning',
-    error: 'error'
+    success: 'success anticon-check-circle-o',
+    info: 'info anticon-info-circle-o',
+    warning: 'warning anticon-exclamation-circle-o',
+    error: 'error anticon-cross-circle-o'
   };
 
   export default {

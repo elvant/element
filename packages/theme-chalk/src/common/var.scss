@@ -30,6 +30,12 @@ $--color-warning: #FFAB3F !default;
 $--color-danger: #FF0139 !default;
 $--color-info: #1A8FE2 !default;
 
+
+$--color-success-soft: mix($--color-white, $--color-success, 60%) !default;
+$--color-warning-soft: mix($--color-white, $--color-warning, 60%) !default;
+$--color-danger-soft: mix($--color-white, $--color-danger, 60%) !default;
+$--color-info-soft: mix($--color-white, $--color-info, 60%) !default;
+
 $--color-success-light: mix($--color-white, $--color-success, 80%) !default;
 $--color-warning-light: mix($--color-white, $--color-warning, 80%) !default;
 $--color-danger-light: mix($--color-white, $--color-danger, 80%) !default;
@@ -44,6 +50,7 @@ $--color-text-primary: #303133 !default;
 $--color-text-regular: #606266 !default;
 $--color-text-secondary: #909399 !default;
 $--color-text-placeholder: #c0c4cc !default;
+$--heading-color: rgba(0, 0, 0, 0.85) !default;
 
 /* Link
 -------------------------- */
@@ -250,6 +257,11 @@ $--alert-description-font-size: 12px !default;
 $--alert-close-font-size: 12px !default;
 $--alert-close-customed-font-size: 13px !default;
 
+$--alert-success-border-color: $--color-success-soft !default;
+$--alert-info-border-color: $--color-info-soft !default;
+$--alert-warning-border-color: $--color-warning-soft !default;
+$--alert-danger-border-color: $--color-danger-soft !default;
+
 $--alert-success-color: $--color-success-lighter !default;
 $--alert-info-color: $--color-info-lighter !default;
 $--alert-warning-color: $--color-warning-lighter !default;
@@ -277,8 +289,10 @@ $--msgbox-danger-color: $--color-danger !default;
 -------------------------- */
 $--message-shadow: $--box-shadow-base !default;
 $--message-min-width: 380px !default;
-$--message-background-color: #edf2fc !default;
+$--message-border-color: transparent !default;
+$--message-background-color: #fff !default;
 $--message-padding: 15px 15px 15px 20px !default;
+$--message-box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !default;
 $--message-content-color: $--color-text-regular !default;
 $--message-close-color: $--color-text-placeholder !default;
 $--message-close-size: 16px !default;
@@ -291,6 +305,8 @@ $--message-danger-color: $--color-danger !default;
 
 /* Notification
 -------------------------- */
+$--notification-font-family: "Chinese Quote", -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif,
+"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $--notification-width: 330px !default;
 $--notification-padding: 16px 24px !default;
 $--notification-radius: 4px !default;
@@ -298,12 +314,11 @@ $--notification-shadow: $--box-shadow-light !default;
 $--notification-border-color: $--border-color-lighter !default;
 $--notification-icon-size: 24px !default;
 $--notification-close-font-size: $--message-close-size !default;
-$--notification-group-margin: 13px !default;
+$--notification-group-margin: 15px !default;
 $--notification-font-size: $--font-size-base !default;
 $--notification-color: $--color-text-regular !default;
 $--notification-title-font-size: 16px !default;
-$--notification-title-color: $--color-text-primary !default;
-
+$--notification-title-color: $--heading-color !default;
 $--notification-close-color: $--color-text-secondary !default;
 $--notification-close-hover-color: $--color-text-regular !default;
 
