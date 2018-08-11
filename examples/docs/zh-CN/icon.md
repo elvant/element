@@ -1,7 +1,10 @@
 <script>
   var iconList = require('examples/icon.json');
-
+  import IconSet from 'examples/components/IconSet.vue';
   export default {
+    components: {
+      IconSet
+    },
     data() {
       return {
         icons: iconList
@@ -21,7 +24,7 @@
     margin: 0 20px;
   }
 
-  .page-component .content > ul.icon-list {
+  .page-component .content  ul.icon-list {
     overflow: hidden;
     list-style: none;
     padding: 0;
@@ -92,6 +95,8 @@
 
 ### 图标集合
 
+
+
 <ul class="icon-list">
   <li v-for="name in icons" :key="name">
     <span>
@@ -100,3 +105,34 @@
     </span>
   </li>
 </ul>
+
+
+
+
+### Ant Design 图标
+
+支持Ant Design 图标 （本想替换原有图标，但是某些组件对原有图标存在依赖，所以先增量更新）
+
+
+### 方向性图标
+
+<div>
+ <IconSet catigory="direction"></IconSet>
+</div>
+
+
+### 提示建议性图标
+
+<div>
+ <IconSet catigory="suggestion"></IconSet>
+</div>
+
+### 网站通用图标
+<div>
+ <IconSet catigory="other"></IconSet>
+</div>
+
+### 品牌和标识
+<div>
+ <IconSet catigory="logo"></IconSet>
+</div>

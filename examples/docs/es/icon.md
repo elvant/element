@@ -1,7 +1,10 @@
 <script>
   var iconList = require('examples/icon.json');
-
+  import IconSet from 'examples/components/IconSet.vue';
   export default {
+    components: {
+      IconSet
+    },
     data() {
       return {
         icons: iconList
@@ -22,7 +25,7 @@
     margin: 0 20px;
   }
 
-  .page-component .content > ul.icon-list {
+  .page-component .content  ul.icon-list {
     overflow: hidden;
     list-style: none;
     padding: 0;
@@ -100,3 +103,33 @@ Simplemente asigna el nombre de la clase a `el-icon-iconName`.
     </span>
   </li>
 </ul>
+
+
+### Ant Design Iconos
+
+
+soporte Ant Design icono
+
+
+### Direccionales Iconos
+
+<div>
+ <IconSet catigory="direction"></IconSet>
+</div>
+
+
+### Sugeridos Iconos
+
+<div>
+ <IconSet catigory="suggestion"></IconSet>
+</div>
+
+### Aplicaciones Iconos
+<div>
+ <IconSet catigory="other"></IconSet>
+</div>
+
+### Marca y Logos
+<div>
+ <IconSet catigory="logo"></IconSet>
+</div>
