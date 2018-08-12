@@ -153,9 +153,10 @@
   import { isKorean } from 'element-ui/src/utils/shared';
 
   const sizeMap = {
-    'medium': 36,
-    'small': 32,
-    'mini': 28
+    'large': 40,
+    // 'medium': 32,
+    'small': 28,
+    'mini': 24
   };
 
   export default {
@@ -646,7 +647,7 @@
           let inputChildNodes = this.$refs.reference.$el.childNodes;
           let input = [].filter.call(inputChildNodes, item => item.tagName === 'INPUT')[0];
           const tags = this.$refs.tags;
-          const sizeInMap = sizeMap[this.selectSize] || 40;
+          const sizeInMap = sizeMap[this.selectSize] || 32;
           input.style.height = this.selected.length === 0
             ? sizeInMap + 'px'
             : Math.max(
