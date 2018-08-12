@@ -198,7 +198,7 @@ Radio with button styles.
 label | the value of Radio | string / number / boolean | — | —
 disabled | whether Radio is disabled | boolean | — | false
 border  | whether to add a border around Radio  | boolean   | — | false
-size  | size of the Radio, only works when `border` is true  | string  | medium / small / mini | —
+size  | size of the Radio, only works when `border` is true  | string  | large / medium / small / mini | —
 name | native 'name' attribute | string    |      —         |     —
 
 ### Radio Events
@@ -211,7 +211,7 @@ name | native 'name' attribute | string    |      —         |     —
 
  Attribute      | Description          | Type      | Accepted Values       | Default
 ---- | ---- | ---- | ---- | ----
-size | the size of radio buttons or bordered radios | string | medium / small / mini | —
+size | the size of radio buttons or bordered radios | string | large / medium / small / mini | —
 disabled  | whether the nesting radios are disabled | boolean   | — | false
 text-color | font color when button is active | string   | — | #ffffff   |
 fill  | border and background color when button is active | string   | — | #1890ff   |

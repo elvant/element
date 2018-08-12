@@ -206,7 +206,7 @@ Besides default size, Tag component provides three additional sizes for you to c
 | disable-transitions | whether to disable animations | boolean | — | false |
 | hit | whether Tag has a highlighted border | boolean | — | false |
 | color | background color of the Tag | string | — | — |
-| size | tag size | string | medium / small / mini | — |
+| size | tag size | string | large / medium / small / mini | — |
 
 
 ### Events

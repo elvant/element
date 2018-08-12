@@ -12,7 +12,7 @@
     -webkit-font-smoothing: antialiased;
 
     &.is-component {
-      overflow: hidden;
+      /* overflow: hidden; */
     }
   }
 

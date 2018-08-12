@@ -206,7 +206,7 @@ Tag 组件提供除了默认值以外的三种尺寸，可以在不同场景下�
 | disable-transitions | 是否禁用渐变动画 | boolean | — | false |
 | hit | 是否有边框描边 | boolean | — | false |
 | color | 背景色 | string | — | — |
-| size | 尺寸 | string | medium / small / mini | — |
+| size | 尺寸 | string | large / medium / small / mini | — |
 
 
 ### Events

@@ -847,7 +847,7 @@ Todos los componentes de un formulario heredan su atributo `size`. De manera sim
 | inline-message          | si desea visualizar el mensaje de error inline con la posición del form item | boolean | —                     | false       |
 | status-icon             | si desea visualizar un icono que indique el resultado de la validación | boolean | —                     | false       |
 | validate-on-rule-change | si se dispara la validacion cuando el prop `rules` cambia | boolean | —                     | true        |
-| size                    | el tamaño de los componentes en este form | string  | medium / small / mini | —           |
+| size                    | el tamaño de los componentes en este form | string  | large / medium / small / mini | —           |
 | disabled                | si se desactivan todos los componentes del formulario. Si esta en `true` no puede ser cambiado por el prop `disabled` individual de los componentes. | boolean | —                     | false       |
 
 ### Form Metodos
@@ -876,7 +876,7 @@ Todos los componentes de un formulario heredan su atributo `size`. De manera sim
 | error          | mensaje de error de campo, establezca su valor y el campo validará el error y mostrará este mensaje inmediatamente. | string  | —                                   | —           |
 | show-message   | si mostrar o no el mensaje de error      | boolean | —                                   | true        |
 | inline-message | mensaje de validación estilo inline      | boolean | —                                   | false       |
-| size           | Tamaño de los componentes en este form item | string  | medium / small / mini               | -           |
+| size           | Tamaño de los componentes en este form item | string  | large / medium / small / mini               | -           |
 
 ### Form-Item Slot
 | Nombre | Descripción              |

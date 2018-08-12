@@ -15,6 +15,10 @@
     position: relative;
     box-shadow: 0 2px 8px #f0f1f2;
 
+    .is-home & {
+      box-shadow: none;
+    }
+
     .container {
       height: 100%;
       box-sizing: border-box;

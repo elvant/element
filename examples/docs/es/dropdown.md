@@ -325,7 +325,7 @@ Además del tamaño predeterminado, el componente Dropdown proporciona tres tama
 | Atributo      | Descripción                              | Tipo    | Valores aceptados                        | Por defecto |
 | ------------- | ---------------------------------------- | ------- | ---------------------------------------- | ----------- |
 | type          | tipo de botón de menú, consulte Componente`Button`, sólo funciona cuando `split-button` es true. | string  | —                                        | —           |
-| size          | tamaño del menú, también funciona en `split-button` | string  | medium / small / mini                    | —           |
+| size          | tamaño del menú, también funciona en `split-button` | string  | large / medium / small / mini                    | —           |
 | split-button  | si se visualiza un grupo de botones      | boolean | —                                        | false       |
 | placement     | colocación del menú                      | string  | top/top-start/top-end/bottom/bottom-start/bottom-end | bottom-end  |
 | trigger       | cómo detonar                             | string  | hover/click                              | hover       |

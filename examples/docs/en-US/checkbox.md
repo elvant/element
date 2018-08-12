@@ -291,7 +291,7 @@ Checkbox with button styles.
 | false-label | value of the Checkbox if it's not checked   | string / number    |      —         |     —    |
 | disabled  | whether the Checkbox is disabled   | boolean   |  — | false   |
 | border  | whether to add a border around Checkbox  | boolean   | — | false   |
-| size  | size of the Checkbox, only works when `border` is true  | string  | medium / small / mini | — |
+| size  | size of the Checkbox, only works when `border` is true  | string  | large / medium / small / mini | — |
 | name | native 'name' attribute | string    |      —         |     —    |
 | checked  | if the Checkbox is checked   | boolean   |  — | false   |
 | indeterminate  | same as `indeterminate` in native checkbox | boolean   |  — | false   |
@@ -304,7 +304,7 @@ Checkbox with button styles.
 ### Checkbox-group Attributes
 | Attribute      | Description         | Type    | Options                         | Default|
 |---------- |-------- |---------- |-------------  |-------- |
-|size | size of checkbox buttons or bordered checkboxes | string | medium / small / mini | — |
+|size | size of checkbox buttons or bordered checkboxes | string | large / medium / small / mini | — |
 | disabled  | whether the nesting checkboxes are disabled | boolean   | — | false   |
 | min     | minimum number of checkbox checked   | number    |       —        |     —    |
 | max     | maximum number of checkbox checked   | number    |       —        |     —    |

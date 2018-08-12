@@ -628,7 +628,7 @@ Búsqueda de datos desde el servidor.
 | minlength     | igual que `minlength` en el input nativo | number           | —                                | —           |
 | placeholder   | placeholder del Input                    | string           | —                                | —           |
 | disabled      | si esta deshabilitado                    | boolean          | —                                | false       |
-| size          | tamaño del input, esto no funciona cuando `type` no es textarea | string           | medium / small / mini            | —           |
+| size          | tamaño del input, esto no funciona cuando `type` no es textarea | string           | large / medium / small / mini            | —           |
 | prefix-icon   | clase del icono de prefijo               | string           | —                                | —           |
 | suffix-icon   | clase del icono de sufijo                | string           | —                                | —           |
 | rows          | número de filas, sólo funciona cuando `type` es 'textarea'. | number           | —                                | 2           |

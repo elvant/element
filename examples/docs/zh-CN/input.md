@@ -805,7 +805,7 @@ export default {
 | placeholder   | 输入框占位文本    | string          | — | — |
 | clearable     | 是否可清空        | boolean         | — | false |
 | disabled      | 禁用            | boolean         | — | false   |
-| size          | 输入框尺寸，只在 `type!="textarea"` 时有效      | string          | medium / small / mini  | — |
+| size          | 输入框尺寸，只在 `type!="textarea"` 时有效      | string          | large / medium / small / mini  | — |
 | prefix-icon   | 输入框头部图标    | string          | — | — |
 | suffix-icon   | 输入框尾部图标    | string          | — | — |
 | rows          | 输入框行数，只对 `type="textarea"` 有效  |  number | — |  2   |

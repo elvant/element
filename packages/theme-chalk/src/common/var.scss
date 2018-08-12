@@ -122,8 +122,8 @@ $--icon-url : "https://at.alicdn.com/t/font_148784_v4ggb6wrjmkotj4i";
 $--checkbox-font-size: 14px !default;
 $--checkbox-font-weight: $--font-weight-primary !default;
 $--checkbox-color: $--color-text-regular !default;
-$--checkbox-input-height: 14px !default;
-$--checkbox-input-width: 14px !default;
+$--checkbox-input-height: 16px !default;
+$--checkbox-input-width: 16px !default;
 $--checkbox-input-border-radius: $--border-radius-small !default;
 $--checkbox-input-fill: $--color-white !default;
 $--checkbox-input-border: $--border-base !default;
@@ -147,18 +147,22 @@ $--checkbox-input-border-color-hover: $--color-primary !default;
 
 $--checkbox-bordered-height: 40px !default;
 $--checkbox-bordered-padding: 9px 20px 9px 10px !default;
+$--checkbox-bordered-large-padding: 9px 20px 9px 10px !default;
 $--checkbox-bordered-medium-padding: 7px 20px 7px 10px !default;
 $--checkbox-bordered-small-padding: 5px 15px 5px 10px !default;
 $--checkbox-bordered-mini-padding: 3px 15px 3px 10px !default;
+$--checkbox-bordered-large-input-height: 16px !default;
+$--checkbox-bordered-large-input-width: 16px !default;
+$--checkbox-bordered-large-height: 40px !default;
 $--checkbox-bordered-medium-input-height: 14px !default;
 $--checkbox-bordered-medium-input-width: 14px !default;
-$--checkbox-bordered-medium-height: 36px !default;
+$--checkbox-bordered-medium-height: 32px !default;
 $--checkbox-bordered-small-input-height: 12px !default;
 $--checkbox-bordered-small-input-width: 12px !default;
-$--checkbox-bordered-small-height: 32px !default;
+$--checkbox-bordered-small-height: 28px !default;
 $--checkbox-bordered-mini-input-height: 12px !default;
 $--checkbox-bordered-mini-input-width: 12px !default;
-$--checkbox-bordered-mini-height: 28px !default;
+$--checkbox-bordered-mini-height: 24px !default;
 
 $--checkbox-button-font-size: $--font-size-base !default;
 $--checkbox-button-checked-fill: $--color-primary !default;
@@ -172,8 +176,8 @@ $--checkbox-button-checked-border-color: $--color-primary !default;
 $--radio-font-size: 14px !default;
 $--radio-font-weight: $--font-weight-primary !default;
 $--radio-color: $--color-text-regular !default;
-$--radio-input-height: 14px !default;
-$--radio-input-width: 14px !default;
+$--radio-input-height: 16px !default;
+$--radio-input-width: 16px !default;
 $--radio-input-border-radius: $--border-radius-circle !default;
 $--radio-input-fill: $--color-white !default;
 $--radio-input-border: $--border-base !default;
@@ -196,19 +200,24 @@ $--radio-checked-icon-color: $--color-primary !default;
 $--radio-input-border-color-hover: $--color-primary !default;
 
 $--radio-bordered-height: 40px !default;
-$--radio-bordered-padding: 12px 20px 0 10px !default;
-$--radio-bordered-medium-padding: 10px 20px 0 10px !default;
-$--radio-bordered-small-padding: 8px 15px 0 10px !default;
-$--radio-bordered-mini-padding: 6px 15px 0 10px !default;
+$--radio-bordered-padding: 9px 20px 0 10px !default;
+
+$--radio-bordered-large-padding: 9px 20px 0 10px !default;
+$--radio-bordered-medium-padding: 7px 20px 0 10px !default;
+$--radio-bordered-small-padding: 5px 15px 0 10px !default;
+$--radio-bordered-mini-padding: 3px 15px 0 10px !default;
+$--radio-bordered-large-input-height: 16px !default;
+$--radio-bordered-large-input-width: 16px !default;
+$--radio-bordered-large-height: 40px !default;
 $--radio-bordered-medium-input-height: 14px !default;
 $--radio-bordered-medium-input-width: 14px !default;
-$--radio-bordered-medium-height: 36px !default;
+$--radio-bordered-medium-height: 32px !default;
 $--radio-bordered-small-input-height: 12px !default;
 $--radio-bordered-small-input-width: 12px !default;
-$--radio-bordered-small-height: 32px !default;
+$--radio-bordered-small-height: 28px !default;
 $--radio-bordered-mini-input-height: 12px !default;
 $--radio-bordered-mini-input-width: 12px !default;
-$--radio-bordered-mini-height: 28px !default;
+$--radio-bordered-mini-height: 24px !default;
 
 $--radio-button-font-size: $--font-size-base !default;
 $--radio-button-checked-fill: $--color-primary !default;
@@ -327,12 +336,21 @@ $--notification-info-color: $--color-info !default;
 $--notification-warning-color: $--color-warning !default;
 $--notification-danger-color: $--color-danger !default;
 
+
+/** Outline
+-------------------------- */
+$--outline-blur-size: 0 !default;
+$--outline-width: 2px !default;
+$--outline-color: $--color-primary !default;
+
+
+
 /* Input
 -------------------------- */
 $--input-font-size: $--font-size-base !default;
 $--input-color: $--color-text-regular !default;
 $--input-width: 140px !default;
-$--input-height: 40px !default;
+$--input-height: 32px !default;
 $--input-border: $--border-base !default;
 $--input-border-color: $--border-color-base !default;
 $--input-border-radius: $--border-radius-base !default;
@@ -355,14 +373,20 @@ $--input-disabled-border: $--disabled-border-base !default;
 $--input-disabled-color: $--disabled-color-base !default;
 $--input-disabled-placeholder-color: $--color-text-placeholder !default;
 
+$--input-large-font-size: 16px !default;
+$--input-large-height: 40px !default;
+
 $--input-medium-font-size: 14px !default;
-$--input-medium-height: 36px !default;
+$--input-medium-height: 32px !default;
 
 $--input-small-font-size: 13px !default;
-$--input-small-height: 32px !default;
+$--input-small-height: 28px !default;
 
 $--input-mini-font-size: 12px !default;
-$--input-mini-height: 28px !default;
+$--input-mini-height: 24px !default;
+
+$--input-outline-offset: 0 0 !default;
+$--input-outline-color: rgba($--outline-color, 0.2) !default;
 
 /* Cascader
 -------------------------- */
@@ -412,25 +436,30 @@ $--tab-vertical-header-count-fill: $--color-text-secondary !default;
 $--button-font-size: 14px !default;
 $--button-font-weight: $--font-weight-primary !default;
 $--button-border-radius: $--border-radius-base !default;
-$--button-padding-vertical: 12px !default;
-$--button-padding-horizontal: 20px !default;
-// $--button-padding-vertical: 8px !default;
-// $--button-padding-horizontal: 15px !default;
+// $--button-padding-vertical: 12px !default;
+// $--button-padding-horizontal: 20px !default;
+$--button-padding-vertical: 8px !default;
+$--button-padding-horizontal: 15px !default;
+
+$--button-large-font-size: 16px !default;
+$--button-large-border-radius: $--border-radius-base !default;
+$--button-large-padding-vertical: 11px !default;
+$--button-large-padding-horizontal: 20px !default;
 
 $--button-medium-font-size: 14px !default;
 $--button-medium-border-radius: $--border-radius-base !default;
-$--button-medium-padding-vertical: 10px !default;
-$--button-medium-padding-horizontal: 20px !default;
+$--button-medium-padding-vertical: 8px !default;
+$--button-medium-padding-horizontal: 15px !default;
 
-$--button-small-font-size: 12px !default;
+$--button-small-font-size: 13px !default;
 $--button-small-border-radius: #{$--border-radius-base - 1} !default;
-$--button-small-padding-vertical: 9px !default;
-$--button-small-padding-horizontal: 15px !default;
+$--button-small-padding-vertical: 7px !default;
+$--button-small-padding-horizontal: 10px !default;
 
 $--button-mini-font-size: 12px !default;
 $--button-mini-border-radius: #{$--border-radius-base - 1} !default;
-$--button-mini-padding-vertical: 7px !default;
-$--button-mini-padding-horizontal: 15px !default;
+$--button-mini-padding-vertical: 5px !default;
+$--button-mini-padding-horizontal: 7px !default;
 
 $--button-default-color: $--color-text-regular !default;
 $--button-default-fill: $--color-white !default;

@@ -1684,7 +1684,7 @@ Buscar y seleccionar opciones con una palabra clave.
 | filterable       | si se pueden buscar las opciones         | boolean         | —                     | —           |
 | debounce         | retardo al escribir la palabra clave del filtro, en milisegundos | number          | —                     | 300         |
 | change-on-select | si se permite seleccionar una opción de cualquier nivel | boolean         | —                     | false       |
-| size             | tamaño del input                         | string          | medium / small / mini | —           |
+| size             | tamaño del input                         | string          | large / medium / small / mini | —           |
 | before-filter    | funcion antes de filtrar con el valor a filtrar como parámetro. Si se devuelve `false` o se devuelve una `Promise` y luego es rechazada, el filtrado será abortado. | function(value) | —                     | —           |
 
 ### props

@@ -289,7 +289,7 @@
 | false-label | 没有选中时的值   | string / number    |      —         |     —    |
 | disabled  | 是否禁用    | boolean   |  — | false   |
 | border  | 是否显示边框  | boolean   | — | false   |
-| size  | Checkbox 的尺寸，仅在 border 为真时有效  | string  | medium / small / mini | — |
+| size  | Checkbox 的尺寸，仅在 border 为真时有效  | string  | large / medium / small / mini | — |
 | name | 原生 name 属性 | string    |      —         |     —    |
 | checked  | 当前是否勾选    | boolean   |  — | false   |
 | indeterminate  | 设置 indeterminate 状态，只负责样式控制    | boolean   |  — | false   |
@@ -302,7 +302,7 @@
 ### Checkbox-group Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-| size     | 多选框组尺寸，仅对按钮形式的 Checkbox 或带有边框的 Checkbox 有效   | string  | medium / small / mini  |    —     |
+| size     | 多选框组尺寸，仅对按钮形式的 Checkbox 或带有边框的 Checkbox 有效   | string  | large / medium / small / mini  |    —     |
 | disabled  | 是否禁用    | boolean   | — | false   |
 | min     | 可被勾选的 checkbox 的最小数量   | number    |       —        |     —    |
 | max     | 可被勾选的 checkbox 的最大数量   | number    |       —        |     —    |

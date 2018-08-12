@@ -74,17 +74,22 @@
           font-size: 14px;
           margin-bottom: 45px;
           line-height: 1.5em;
+          border-spacing: 0;
+          empty-cells: show;
+          border: 1px solid #ebedf0;
+          margin: 8px 0 16px;
+          border-width: 0;
 
           strong {
             font-weight: normal;
           }
 
           td, th {
-            border-bottom: 1px solid #d8d8d8;
-            border: 1px solid #ebedf0;
+            border: 1px solid #e8e8e8;
             border-color: #e8e8e8;
-            padding: 15px;
             max-width: 250px;
+            padding: 14px 16px;
+            border-width: 1px 0;
           }
 
           th {
@@ -93,6 +98,7 @@
             color: #666;
             font-weight: normal;
             background: rgba(0,0,0,.02);
+            border-width: 0 0 2px 0;
 
           }
 
@@ -302,10 +308,10 @@
       window.addEventListener('scroll', this.throttledScrollHandler);
       this.renderAnchorHref();
       this.goAnchor();
-      // document.body.classList.add('is-component');
+      document.body.classList.add('is-component');
     },
     destroyed() {
-      // document.body.classList.remove('is-component');
+      document.body.classList.remove('is-component');
     },
     beforeDestroy() {
       window.removeEventListener('scroll', this.throttledScrollHandler);

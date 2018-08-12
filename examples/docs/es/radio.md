@@ -196,7 +196,7 @@ Radio con estilo de botón.
 | label    | el valor del Radio                       | string / number / boolean | —                     | —           |
 | disabled | si el Radio está deshabilitado           | boolean                   | —                     | false       |
 | border   | agregar borde alrededor del elemento Radio | boolean                   | —                     | false       |
-| size     | tamaño del elemento Radio, solo funciona si `border` es verdadero | string                    | medium / small / mini | —           |
+| size     | tamaño del elemento Radio, solo funciona si `border` es verdadero | string                    | large / medium / small / mini | —           |
 | name     | atributo nativo 'name'                   | string                    | —                     | —           |
 
 ### Atributos de Radio-button
@@ -211,7 +211,7 @@ Radio con estilo de botón.
 
 | Atributo   | Descripción                              | Tipo    | Valores Aceptado      | Valores por defecto |
 | ---------- | ---------------------------------------- | ------- | --------------------- | ------------------- |
-| size       | tamaño de los `radio buttons` o `bordered radios` | string  | medium / small / mini | —                   |
+| size       | tamaño de los `radio buttons` o `bordered radios` | string  | large / medium / small / mini | —                   |
 | disabled   | si la anidación de radios está desahabilitada | boolean | —                     | false               |
 | text-color | color de las letras cuando el botón está activo | string  | —                     | #ffffff             |
 | fill       | color del borde y fondo cuando el botón está activo | string  | —                     | #1890ff             |

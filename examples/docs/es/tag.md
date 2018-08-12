@@ -206,7 +206,7 @@ Además del tamaño predeterminado, el componente Tag proporciona tres tamaños 
 | disable-transitions | si se deshabilitan las animaciones  | boolean | —                           | false       |
 | hit                 | si el  Tag tiene un borde resaltado | boolean | —                           | false       |
 | color               | color de fondo del Tag              | string  | —                           | —           |
-| size                | tamaño del Tag                      | string  | medium / small / mini       | —           |
+| size                | tamaño del Tag                      | string  | large / medium / small / mini       | —           |
 
 
 ### Eventos

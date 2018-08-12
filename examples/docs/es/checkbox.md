@@ -291,7 +291,7 @@ Checkbox con estilo tipo Botón.
 | false-label   | valor del Checkbox si no está marcado    | string / number           | —                     | —           |
 | disabled      | especifica si el Checkbox está deshabilitado | boolean                   | —                     | false       |
 | border        | especifica si agrega un borde alrededor del Checkbox | boolean                   | —                     | false       |
-| size          | tamaño del Checkbox, sólo funciona si `border` es true | string                    | medium / small / mini | —           |
+| size          | tamaño del Checkbox, sólo funciona si `border` es true | string                    | large / medium / small / mini | —           |
 | name          | atributo 'name' nativo                   | string                    | —                     | —           |
 | checked       | especifica si el Checkbox está marcado   | boolean                   | —                     | false       |
 | indeterminate | similar a `indeterminate` en el checkbox nativo | boolean                   | —                     | false       |
@@ -304,7 +304,7 @@ Checkbox con estilo tipo Botón.
 ### Atributos de Checkbox-group
 | Atributo   | Descripción                              | Tipo    | Valores aceptados     | Por Defecto |
 | ---------- | ---------------------------------------- | ------- | --------------------- | ----------- |
-| size       | tamaño de los checkboxes de tipo botón o los checkboxes con border | string  | medium / small / mini | —           |
+| size       | tamaño de los checkboxes de tipo botón o los checkboxes con border | string  | large / medium / small / mini | —           |
 | disabled   | especifica si los checkboxes anidados están deshabilitados | boolean | —                     | false       |
 | min        | cantidad mínima de checkboxes que deben ser marcados | number  | —                     | —           |
 | max        | cantidad máxima de checkboxes que pueden ser marcados | number  | —                     | —           |

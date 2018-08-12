@@ -375,6 +375,10 @@
           reverseTranslate: true
         }]
       });
+      document.body.classList.add('is-home');
+    },
+    destroyed() {
+      document.body.classList.remove('is-home');
     }
   };
 </script>
