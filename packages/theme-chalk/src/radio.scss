@@ -141,7 +141,7 @@
     @include when(checked) {
       .el-radio__inner {
         border-color: $--radio-checked-input-border-color;
-        background: $--radio-checked-icon-color;
+        // background: $--radio-checked-icon-color;
         &::after {
           transform: translate(-50%, -50%) scale(0.875);
         }
