@@ -179,7 +179,7 @@ export default {
             <el-select
               value={ this.$parent.internalPageSize }
               popperClass={ this.$parent.popperClass || '' }
-              size="mini"
+              size={ this.small ? 'mini' : ''}
               on-input={ this.handleChange }
               disabled={ this.$parent.disabled }>
               {

@@ -59,6 +59,12 @@
   layout="prev, pager, next"
   :total="50">
 </el-pagination>
+<br>
+<el-pagination
+  small
+  layout="prev, pager, next"
+  :total="500">
+</el-pagination>
 ```
 :::
 
