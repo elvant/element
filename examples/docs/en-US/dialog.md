@@ -296,7 +296,7 @@ If the variable bound to `visible` is managed in Vuex store, the `.sync` can not
 | show-close | whether to show a close button | boolean    | — | true |
 | before-close | callback before Dialog closes, and it will prevent Dialog from closing | function(done)，done is used to close the Dialog | — | — |
 | center | whether to align the header and footer in center | boolean | — | false |
-
+| border | whether to display the Dialog header and footer border, the default display | boolean | — | true |
 ### Slot
 
 | Name | Description |

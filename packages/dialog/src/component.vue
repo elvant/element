@@ -5,7 +5,7 @@
     <div class="el-dialog__wrapper" v-show="visible" @click.self="handleWrapperClick">
       <div
         class="el-dialog"
-        :class="[{ 'is-fullscreen': fullscreen, 'el-dialog--center': center }, customClass]"
+        :class="[{ 'is-fullscreen': fullscreen, 'is-border': border, 'el-dialog--center': center }, customClass]"
         ref="dialog"
         :style="style">
         <div class="el-dialog__header">
@@ -80,9 +80,11 @@
         type: Boolean,
         default: true
       },
-
+      border: {
+        type: Boolean,
+        default: true
+      },
       width: String,
-
       fullscreen: Boolean,
 
       customClass: {
