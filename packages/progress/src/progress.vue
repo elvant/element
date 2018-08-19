@@ -84,7 +84,7 @@
         return style;
       },
       relativeStrokeWidth() {
-        return (this.strokeWidth / this.width * 100).toFixed(1);
+        return (this.strokeWidth).toFixed(1);
       },
       trackPath() {
         const radius = parseInt(50 - parseFloat(this.relativeStrokeWidth) / 2, 10);

@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="https://cdn.rawgit.com/ElemeFE/element/dev/element_logo.svg">
+  <img src="https://cdn.rawgit.com/elvant/element/dev/elvant_logo.svg">
 </p>
 
 <p align="center">
-  <a href="https://travis-ci.org/ElemeFE/element">
-    <img src="https://travis-ci.org/ElemeFE/element.svg?branch=master">
+  <a href="https://travis-ci.org/elvant/element">
+    <img src="https://travis-ci.org/elvant/element.svg?branch=master">
   </a>
-  <a href="https://coveralls.io/github/ElemeFE/element?branch=master">
-    <img src="https://coveralls.io/repos/github/ElemeFE/element/badge.svg?branch=master">
+  <a href="https://coveralls.io/github/elvant/element?branch=master">
+    <img src="https://coveralls.io/repos/github/elvant/element/badge.svg?branch=master">
   </a>
   <a href="https://cdnjs.com/libraries/element-ui">
     <img src="https://img.shields.io/cdnjs/v/element-ui.svg">

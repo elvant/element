@@ -40,13 +40,14 @@
         </a>
         <h4>Vant: Ant Design theme</h4>
 
-        
-        <a href="https://github.com/icai/theme-antd" target="_blank">
+        <a href="https://github.com/elvant/element" target="_blank">
           <i class="doc-icon-github elementdoc"></i>
         </a>
-
-        <a href="https://github.com/icai" target="_blank">
-          <i class="doc-icon-github elementdoc" style="margin-right:0" ></i>
+        <a href="https://github.com/elvant/theme-antd" target="_blank">
+          <i class="doc-icon-github elementdoc"></i>
+        </a>
+        <a href="https://github.com/elvant" target="_blank">
+         <img src="https://avatars0.githubusercontent.com/u/42511002?s=32&v=4"  class="elementdoc" style="margin-right:0" alt="" srcset="">
         </a>
       </div>
     </div>
