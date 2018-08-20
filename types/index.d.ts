@@ -1,4 +1,4 @@
-export * from './element-ui'
+export * from './elvant'
 
-import * as ElementUI from './element-ui'
+import * as ElementUI from './elvant'
 export default ElementUI

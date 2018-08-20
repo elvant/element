@@ -28,7 +28,7 @@
   export default {
     data() {
       return {
-        chalk: '', // content of theme-chalk css
+        chalk: '', // content of theme-antd css
         docs: '', // content of docs css
         theme: ORIGINAL_THEME
       };
@@ -58,7 +58,7 @@
         const docsHandler = getHandler('docs', 'docs-style');
 
         if (!this.chalk) {
-          const url = `https://unpkg.com/element-ui@${ version }/lib/theme-chalk/index.css`;
+          const url = `https://unpkg.com/elvant@${ version }/lib/theme-antd/index.css`;
           this.getCSSString(url, chalkHandler, 'chalk');
         } else {
           chalkHandler();

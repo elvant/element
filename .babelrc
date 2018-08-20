@@ -5,9 +5,9 @@
     "utils": {
       "plugins": [
         ["module-resolver", {
-          "root": ["element-ui"],
+          "root": ["elvant"],
           "alias": {
-            "element-ui/src": "element-ui/lib"
+            "elvant/src": "elvant/lib"
           }
         }]
       ]

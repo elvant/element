@@ -1,8 +1,8 @@
 {
-  "name": "element-ui",
+  "name": "elvant",
   "version": "2.4.6",
   "description": "A Component Library for Vue.js.",
-  "main": "lib/element-ui.common.js",
+  "main": "lib/elvant.common.js",
   "files": [
     "lib",
     "src",
@@ -13,12 +13,12 @@
   "scripts": {
     "bootstrap": "yarn || npm i",
     "build:file": "node build/bin/iconInit.js & node build/bin/build-entry.js & node build/bin/i18n.js & node build/bin/version.js",
-    "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-chalk/gulpfile.js && cp-cli packages/theme-chalk/lib lib/theme-chalk",
+    "build:theme": "node build/bin/gen-cssfile && gulp build --gulpfile packages/theme-antd/gulpfile.js && cp-cli packages/theme-antd/lib lib/theme-antd",
     "build:utils": "cross-env BABEL_ENV=utils babel src --out-dir lib --ignore src/index.js",
     "build:umd": "node build/bin/build-locale.js",
     "clean": "rimraf lib && rimraf packages/*/lib && rimraf test/**/coverage",
-    "deploy": "npm run deploy:build && gh-pages -d examples/element-ui --remote eleme && rimraf examples/element-ui",
-    "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo vant.w3cub.com>>examples/element-ui/CNAME",
+    "deploy": "npm run deploy:build && gh-pages -d examples/elvant --remote eleme && rimraf examples/elvant",
+    "deploy:build": "npm run build:file && cross-env NODE_ENV=production webpack --config build/webpack.demo.js && echo vant.w3cub.com>>examples/elvant/CNAME",
     "dev": "npm run bootstrap && npm run build:file && cross-env NODE_ENV=development webpack-dev-server --config build/webpack.demo.js & node build/bin/template.js",
     "dev:play": "npm run build:file && cross-env NODE_ENV=development PLAY_ENV=true webpack-dev-server --config build/webpack.demo.js",
     "dist": "npm run clean && npm run build:file && npm run lint && webpack --config build/webpack.conf.js && webpack --config build/webpack.common.js && webpack --config build/webpack.component.js && npm run build:utils && npm run build:umd && npm run build:theme",
@@ -51,7 +51,7 @@
     "url": "https://github.com/ElemeFE/element/issues"
   },
   "unpkg": "lib/index.js",
-  "style": "lib/theme-chalk/index.css",
+  "style": "lib/theme-antd/index.css",
   "dependencies": {
     "async-validator": "~1.8.1",
     "babel-helper-vue-jsx-merge-props": "^2.0.0",

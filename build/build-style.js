@@ -33,7 +33,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-cssmin');
 
 gulp.task('compile', function () {
-  return gulp.src('../packages/theme-chalk/src/index.scss')
+  return gulp.src('../packages/theme-antd/src/index.scss')
     .pipe(sass.sync())
     .pipe(autoprefixer({
       browsers: ['ie > 9', 'last 2 versions'],
@@ -46,7 +46,7 @@ gulp.task('compile', function () {
 });
 
 gulp.task('copyfont', function () {
-  return gulp.src('../packages/theme-chalk/src/fonts/**')
+  return gulp.src('../packages/theme-antd/src/fonts/**')
     .pipe(cssmin())
     .pipe(gulp.dest('../dist/fonts'));
 });

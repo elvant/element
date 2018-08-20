@@ -2,27 +2,27 @@
 Element utiliza la metodología BEM en CSS con la finalidad de que puedas sobrescribir los estilos fácilmente. Pero, si necesita remplazar estilos a gran escala, por ejemplo, cambiar el color del tema de azul a naranja o verde, quizás reemplazarlos uno a uno no sea lo más adecuado, para ello hay 3 maneras de modificar los estilos.
 
 ### Cambiando el color del tema
-Si lo que se busca es cambiar el color del tema de Element, se recomienda utilizar el [sitio de visualización de temas](https://elementui.github.io/theme-chalk-preview/#/en-US). Element utiliza un color azul brillante y amigable como tema principal. Al cambiarlo, puede hacer que Element este más conectado visualmente a proyectos específicos.
+Si lo que se busca es cambiar el color del tema de Element, se recomienda utilizar el [sitio de visualización de temas](https://elementui.github.io/theme-antd-preview/#/en-US). Element utiliza un color azul brillante y amigable como tema principal. Al cambiarlo, puede hacer que Element este más conectado visualmente a proyectos específicos.
 
 Este sitio, le permitirá obtener una vista previa del tema con un nuevo color en tiempo real, y, además, obtener un paquete de estilos completo basado en el nuevo color para su descarga (para importar estos nuevos estilos, consulte la sección ‘Importar un tema personalizado’ o ‘Importar un tema de componente bajo demanda' que se encuentran dentro de esta sección).
 
 ### Actualizando variables SCSS en tu proyecto
-`theme-chalk` esta escrito en SCSS. Si su proyecto también utiliza SCSS, puede cambiar las variables de estilos de Element. Para ello, solo necesita crear un nuevo archivo de estilos, por ejemplo, `element-variables.scss`:
+`theme-antd` esta escrito en SCSS. Si su proyecto también utiliza SCSS, puede cambiar las variables de estilos de Element. Para ello, solo necesita crear un nuevo archivo de estilos, por ejemplo, `element-variables.scss`:
 
 ```html
 /* Color del tema */
 $--color-primary: teal;
 
 /* Ubicación de la fuente, obligatoria */
-$--font-path: '~element-ui/lib/theme-chalk/fonts';
+$--font-path: '~elvant/lib/theme-antd/fonts';
 
-@import "~element-ui/packages/theme-chalk/src/index";
+@import "~elvant/packages/theme-antd/src/index";
 ```
 
 Entonces, en el archivo principal del proyecto, importe este archivo de estilos en lugar de los estilos de Element:
 ```JS
 import Vue from 'vue'
-import Element from 'element-ui'
+import Element from 'elvant'
 import './element-variables.scss'
 
 Vue.use(Element)
@@ -44,10 +44,10 @@ npm i element-theme -g
 Ahora, instale el tema `chalk` desde npm o Github.
 ```shell
 # desde npm
-npm i element-theme-chalk -D
+npm i element-theme-antd -D
 
 # desde GitHub
-npm i https://github.com/ElementUI/theme-chalk -D
+npm i https://github.com/ElementUI/theme-antd -D
 ```
 
 #### <strong>Inicializar archivo de variables</strong>
@@ -100,7 +100,7 @@ Por defecto, el archivo de tema construido es colocado dentro de `./theme`. Pued
 
 ```javascript
 import '../theme/index.css'
-import ElementUI from 'element-ui'
+import ElementUI from 'elvant'
 import Vue from 'vue'
 
 Vue.use(ElementUI)
@@ -112,7 +112,7 @@ Si esta utilizando `babel-plugin-component` para importar bajo demanda, solo deb
 {
   "plugins": [["component", [
     {
-      "libraryName": "element-ui",
+      "libraryName": "elvant",
       "styleLibraryName": "~theme"
     }
   ]]]

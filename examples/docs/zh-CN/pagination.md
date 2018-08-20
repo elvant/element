@@ -146,7 +146,7 @@
 ```
 :::
 <script>
-  import { addClass } from 'element-ui/src/utils/dom';
+  import { addClass } from 'elvant/src/utils/dom';
   export default {
     methods: {
       handleSizeChange(val) {

@@ -8,11 +8,11 @@ lib
 .idea
 dist
 .vscode
-examples/element-ui
+examples/elvant
 examples/pages/en-US
 examples/pages/zh-CN
 examples/pages/es
-fe.element/element-ui
+fe.element/elvant
 .npmrc
 coverage
 waiter.config.js

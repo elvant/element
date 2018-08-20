@@ -72,7 +72,7 @@ describe('${ComponentName}', () => {
 `
   },
   {
-    filename: path.join('../../packages/theme-chalk/src', `${componentname}.scss`),
+    filename: path.join('../../packages/theme-antd/src', `${componentname}.scss`),
     content: `@import "mixins/mixins";
 @import "common/var";
 
