@@ -1,7 +1,7 @@
 #! /bin/sh
 mkdir temp_web
-git config --global user.name "element-bot"
-git config --global user.email "wallement@gmail.com"
+git config --global user.name "Terry Rot"
+git config --global user.email "gidcai@gmail.com"
 
 if [ "$ROT_TOKEN" = "" ]; then
   echo "Bye~"
@@ -13,7 +13,7 @@ if [ "$TRAVIS_TAG" ]; then
   # build lib
   npm run dist
   cd temp_web
-  git clone https://$ROT_TOKEN@github.com/ElementUI/lib.git && cd lib
+  git clone https://$ROT_TOKEN@github.com/elvant/lib.git && cd lib
   rm -rf `find * ! -name README.md`
   cp -rf ../../lib/** .
   git add -A .
@@ -22,11 +22,11 @@ if [ "$TRAVIS_TAG" ]; then
   git push origin master --tags
   cd ../..
 
-  # build theme-chalk
+  # build theme-antd
   cd temp_web
-  git clone https://$ROT_TOKEN@github.com/ElementUI/theme-chalk.git && cd theme-chalk
+  git clone https://$ROT_TOKEN@github.com/elvant/theme-antd.git && cd theme-antd
   rm -rf *
-  cp -rf ../../packages/theme-chalk/** .
+  cp -rf ../../packages/theme-antd/** .
   git add -A .
   git commit -m "[build] $TRAVIS_TAG"
   git tag $TRAVIS_TAG
@@ -36,7 +36,7 @@ if [ "$TRAVIS_TAG" ]; then
   # build site
   npm run deploy:build
   cd temp_web
-  git clone --depth 1 -b gh-pages --single-branch https://$ROT_TOKEN@github.com/ElemeFE/element.git && cd element
+  git clone --depth 1 -b gh-pages --single-branch https://$ROT_TOKEN@github.com/elvant/element.git && cd element
   # build sub folder
   echo $TRAVIS_TAG
 
@@ -58,7 +58,7 @@ fi
 # build dev site
 npm run build:file && CI_ENV=/dev/$TRAVIS_BRANCH/ node_modules/.bin/cross-env NODE_ENV=production node_modules/.bin/webpack --config build/webpack.demo.js
 cd temp_web
-git clone https://$ROT_TOKEN@github.com/ElementUI/dev.git && cd dev
+git clone https://$ROT_TOKEN@github.com/elvant/dev.git && cd dev
 mkdir $TRAVIS_BRANCH
 rm -rf $TRAVIS_BRANCH/**
 cp -rf ../../examples/element-ui/** $TRAVIS_BRANCH/
@@ -67,11 +67,11 @@ git commit -m "$TRAVIS_COMMIT_MSG"
 git push origin master
 cd ../..
 
-# push dev theme-chalk
+# push dev theme-antd
 cd temp_web
-git clone -b $TRAVIS_BRANCH https://$ROT_TOKEN@github.com/ElementUI/theme-chalk.git && cd theme-chalk
+git clone -b $TRAVIS_BRANCH https://$ROT_TOKEN@github.com/elvant/theme-antd.git && cd theme-antd
 rm -rf *
-cp -rf ../../packages/theme-chalk/** .
+cp -rf ../../packages/theme-antd/** .
 git add -A .
 git commit -m "$TRAVIS_COMMIT_MSG"
 git push origin $TRAVIS_BRANCH

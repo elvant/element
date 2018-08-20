@@ -16,8 +16,8 @@ then
   VERSION=$VERSION npm run dist
 
   # publish theme
-  echo "Releasing theme-chalk $VERSION ..."
-  cd packages/theme-chalk
+  echo "Releasing theme-antd $VERSION ..."
+  cd packages/theme-antd
   npm version $VERSION --message "[release] $VERSION"
   if [[ $VERSION =~ "beta" ]]
   then
