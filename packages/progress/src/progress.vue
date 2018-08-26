@@ -23,6 +23,11 @@
     </div>
     <div class="el-progress-circle" :style="{height: width + 'px', width: width + 'px'}" v-else>
       <svg viewBox="0 0 100 100">
+        <defs v-if="gradientData.length > 0">
+            <linearGradient :id="gradientid"  :x1="point.x1" :y1="point.y1" :x2="point.x2" :y2="point.y2" >
+              <stop v-for="(item, index) in gradientData" :key="index"  :offset="item.offset" :stop-color="item.color"/>
+            </linearGradient>
+        </defs>
         <path class="el-progress-circle__track" :d="trackPath" stroke="#e5e9f2" :stroke-width="relativeStrokeWidth" fill="none"></path>
         <path class="el-progress-circle__path" :d="trackPath" stroke-linecap="round" :stroke="stroke" :stroke-width="relativeStrokeWidth" fill="none" :style="circlePathStyle"></path>
       </svg>
@@ -38,6 +43,7 @@
   </div>
 </template>
 <script>
+  let uid = 0;
   export default {
     name: 'ElProgress',
     props: {
@@ -74,9 +80,44 @@
       color: {
         type: String,
         default: ''
+      },
+      gradient: {
+        type: Array,
+        default: () => []
+      },
+      gradientDirection: {
+        type: Array,
+        default: () => [0, 0, 1, 0],
+        validator: val => val.length === 4
       }
+
     },
     computed: {
+      gradientid() {
+        return 'el-gradientid' + ++uid;
+      },
+      isGradient() {
+        return this.gradient.length > 0;
+      },
+      gradientData() {
+        const d = [];
+        let len = this.gradient.length;
+        for (let i = 0; i < len; i++) {
+          const el = {};
+          el.color = this.gradient[i];
+          el.offset = parseFloat(100 * (i / (len - 1))).toFixed(0) + '%';
+          d.push(el);
+        }
+        return d;
+      },
+      point() {
+        let point = {};
+        point.x1 = this.gradientDirection[0];
+        point.y1 = this.gradientDirection[1];
+        point.x2 = this.gradientDirection[2];
+        point.y2 = this.gradientDirection[3];
+        return point;
+      },
       barStyle() {
         const style = {};
         style.width = this.percentage + '%';
@@ -105,18 +146,22 @@
       },
       stroke() {
         let ret;
-        if (this.color) {
-          ret = this.color;
+        if (this.isGradient) {
+          ret = `url(#${this.gradientid})`;
         } else {
-          switch (this.status) {
-            case 'success':
-              ret = '#13ce66';
-              break;
-            case 'exception':
-              ret = '#ff4949';
-              break;
-            default:
-              ret = '#20a0ff';
+          if (this.color) {
+            ret = this.color;
+          } else {
+            switch (this.status) {
+              case 'success':
+                ret = '#13ce66';
+                break;
+              case 'exception':
+                ret = '#ff4949';
+                break;
+              default:
+                ret = '#20a0ff';
+            }
           }
         }
         return ret;
