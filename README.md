@@ -43,8 +43,8 @@
   <tbody>
     <tr>
       <td align="center" valign="middle">
-        <a href="https://tipe.io/?ref=element" target="_blank">
-          <img width="150px" src="https://user-images.githubusercontent.com/1016365/34124854-48fafa06-e3e9-11e7-8c04-251055feebee.png">
+        <a href="https://docs.w3cub.com/?ref=element" target="_blank">
+          <img width="150px" src="https://avatars0.githubusercontent.com/u/24860109">
         </a>
       </td>
       <td align="center" valign="middle">
