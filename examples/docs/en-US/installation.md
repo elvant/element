@@ -27,6 +27,6 @@ We recommend our users to lock Element's version when using CDN. Please refer to
 
 If you are using CDN, a hello-world page is easy with Element. [Online Demo](https://jsfiddle.net/hzfpyvg6/14/)
 
-<iframe width="100%" height="600" src="//jsfiddle.net/hzfpyvg6/1213/embedded/html,result/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="600" src="//jsfiddle.net/icai/0rLkz687/embedded/html,result/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 If you are using npm and wish to apply webpack, please continue to the next page: [Quick Start](/#/en-US/component/quickstart).
