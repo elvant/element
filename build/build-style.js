@@ -32,7 +32,7 @@ const rename = require('gulp-rename');
 const autoprefixer = require('gulp-autoprefixer');
 const cssmin = require('gulp-cssmin');
 
-gulp.task('compile', function () {
+gulp.task('compile', function() {
   return gulp.src('../packages/theme-antd/src/index.scss')
     .pipe(sass.sync())
     .pipe(autoprefixer({
@@ -45,7 +45,7 @@ gulp.task('compile', function () {
     .pipe(gulp.dest('../dist'));
 });
 
-gulp.task('copyfont', function () {
+gulp.task('copyfont', function() {
   return gulp.src('../packages/theme-antd/src/fonts/**')
     .pipe(cssmin())
     .pipe(gulp.dest('../dist/fonts'));
