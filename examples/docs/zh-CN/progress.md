@@ -95,3 +95,5 @@ export default {
 | color  | 进度条背景色（会覆盖 status 状态颜色） | string | — | — |
 | width  | 环形进度条画布宽度（只在 type=circle 时可用） | number |  | 126 |
 | show-text  | 是否显示进度条文字内容 | boolean | — | true |
+| gradient  | 进度条渐变背景色，type circle 可用 | array | — | [] |
+| gradientDirection  | 进度条渐变背景色方向， type circle 可用，[x1, y1, x2, y2] | array | — | [0, 0, 1, 0] |
