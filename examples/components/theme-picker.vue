@@ -24,11 +24,11 @@
 <script>
   import { version } from 'main/index.js';
 
-  const ORIGINAL_THEME = '#409EFF';
+  const ORIGINAL_THEME = '#1890ff';
   export default {
     data() {
       return {
-        chalk: '', // content of theme-antd css
+        antd: '', // content of theme-antd css
         docs: '', // content of docs css
         theme: ORIGINAL_THEME
       };
@@ -54,14 +54,14 @@
           };
         };
 
-        const chalkHandler = getHandler('chalk', 'chalk-style');
+        const antdHandler = getHandler('antd', 'antd-style');
         const docsHandler = getHandler('docs', 'docs-style');
 
-        if (!this.chalk) {
+        if (!this.antd) {
           const url = `https://unpkg.com/elvant@${ version }/lib/theme-antd/index.css`;
-          this.getCSSString(url, chalkHandler, 'chalk');
+          this.getCSSString(url, antdHandler, 'antd');
         } else {
-          chalkHandler();
+          antdHandler();
         }
 
         if (!this.docs) {
@@ -76,7 +76,7 @@
         const styles = [].slice.call(document.querySelectorAll('style'))
           .filter(style => {
             const text = style.innerText;
-            return new RegExp(oldVal, 'i').test(text) && !/Chalk Variables/.test(text);
+            return new RegExp(oldVal, 'i').test(text) && !/Antd Variables/.test(text);
           });
         styles.forEach(style => {
           const { innerText } = style;

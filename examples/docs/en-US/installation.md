@@ -25,7 +25,7 @@ We recommend our users to lock Element's version when using CDN. Please refer to
 
 ### Hello world
 
-If you are using CDN, a hello-world page is easy with Element. [Online Demo](https://jsfiddle.net/hzfpyvg6/14/)
+If you are using CDN, a hello-world page is easy with Element. [Online Demo](https://jsfiddle.net/icai/t8ebp40u/)
 
 <iframe width="100%" height="600" src="//jsfiddle.net/icai/0rLkz687/embedded/html,result/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 

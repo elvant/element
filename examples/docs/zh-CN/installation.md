@@ -25,7 +25,7 @@ npm i elvant -S
 
 ### Hello world
 
-通过 CDN 的方式我们可以很容易地使用 Element 写出一个 Hello world 页面。[在线演示](https://jsfiddle.net/hzfpyvg6/14/)
+通过 CDN 的方式我们可以很容易地使用 Element 写出一个 Hello world 页面。[在线演示](https://jsfiddle.net/icai/t8ebp40u/)
 
 <iframe width="100%" height="600" src="//jsfiddle.net/icai/0rLkz687/embedded/html,result/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
