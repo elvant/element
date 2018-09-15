@@ -324,10 +324,12 @@ Incluye todo tipo de entradas, tales como `input`, `select`, `radio` y `checkbox
   }
 </script>
 ```
+
 :::
 
 :::tip
 [W3C](https://www.w3.org/MarkUp/html-spec/html-spec_8.html#SEC8.2) reglamenta que
+
 > <i>Cuando sólo hay un campo de entrada de texto de una sola línea en un formulario, el agente usuario debe aceptar <b>Enter</b> en ese campo como una solicitud para enviar el formulario.</i>
 
 Para prevenir este comportamiento, puede agregar `@submit.native.prevent` on `<el-form>`.
@@ -372,6 +374,7 @@ Cuando el espacio vertical es limitado y la forma es relativamente simple, puede
   }
 </script>
 ```
+
 :::
 
 ### Alineamiento
@@ -413,6 +416,7 @@ Dependiendo de su diseño, hay varias maneras diferentes de alinear el elemento 
   }
 </script>
 ```
+
 :::
 
 ### Validación
@@ -528,6 +532,7 @@ El componente `form` le permite verificar sus datos, ayudándole a encontrar y c
   }
 </script>
 ```
+
 :::
 
 ### Reglas personalizadas de validación
@@ -539,10 +544,10 @@ Este ejemplo muestra cómo personalizar sus propias reglas de validación para f
 ```html
 <el-form :model="ruleForm2" status-icon :rules="rules2" ref="ruleForm2" label-width="120px" class="demo-ruleForm">
   <el-form-item label="Password" prop="pass">
-    <el-input type="password" v-model="ruleForm2.pass" auto-complete="off"></el-input>
+    <el-input type="password" v-model="ruleForm2.pass" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item label="Confirm" prop="checkPass">
-    <el-input type="password" v-model="ruleForm2.checkPass" auto-complete="off"></el-input>
+    <el-input type="password" v-model="ruleForm2.checkPass" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item label="Age" prop="age">
     <el-input v-model.number="ruleForm2.age"></el-input>
@@ -627,6 +632,7 @@ Este ejemplo muestra cómo personalizar sus propias reglas de validación para f
   }
 </script>
 ```
+
 :::
 
 ### Eliminar o agregar validaciones dinamicamente 
@@ -705,6 +711,7 @@ Este ejemplo muestra cómo personalizar sus propias reglas de validación para f
   }
 </script>
 ```
+
 :::
 
 ### Validación numerica
@@ -721,7 +728,7 @@ Este ejemplo muestra cómo personalizar sus propias reglas de validación para f
       { type: 'number', message: 'age must be a number'}
     ]"
   >
-    <el-input type="age" v-model.number="numberValidateForm.age" auto-complete="off"></el-input>
+    <el-input type="age" v-model.number="numberValidateForm.age" autocomplete="off"></el-input>
   </el-form-item>
   <el-form-item>
     <el-button type="primary" @click="submitForm('numberValidateForm')">Submit</el-button>
@@ -755,6 +762,7 @@ Este ejemplo muestra cómo personalizar sus propias reglas de validación para f
   }
 </script>
 ```
+
 :::
 
 :::tip
@@ -831,16 +839,17 @@ Todos los componentes de un formulario heredan su atributo `size`. De manera sim
   };
 </script>
 ```
+
 :::
 
 ### Form Atributos
 
 | Atributo                | Descripción                              | Tipo    | Valores aceptados     | Por defecto |
-| ----------------------- | ---------------------------------------- | ------- | --------------------- | ----------- |
+| ----------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------- | --------------------- | ----------- |
 | model                   | Datos del componente                     | object  | —                     | —           |
 | rules                   | Reglas de validación                     | object  | —                     | —           |
 | inline                  | Si el form es inline                     | boolean | —                     | false       |
-| label-position          | Posicion de la etiqueta                  | string  | left / right / top    | right       |
+| label-position          | Posicion de la etiqueta. Si esta 'left' o 'right', también se necesita el prop `label-width`                                                         | string  | left / right / top    | right       |
 | label-width             | ancho de la etiqueta, y todos los form items directos descendientes heredarán este valor | string  | —                     | —           |
 | label-suffix            | sufijo de la etiqueta                    | string  | —                     | —           |
 | show-message            | si mostrar o no el mensaje de error      | boolean | —                     | true        |
@@ -853,21 +862,22 @@ Todos los componentes de un formulario heredan su atributo `size`. De manera sim
 ### Form Metodos
 
 | Metodo        | Descripción                              | Parametros                               |
-| ------------- | ---------------------------------------- | ---------------------------------------- |
+| ------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- |
 | validate      | el método para validar todo el formulario. Takes a callback as a param. After validation, the callback will be executed with two params: a boolean indicating if the validation has passed, and an object containing all fields that fail the validation. Devuelve una promesa si se omite el return | Function(callback: Function(boolean, object))    |
 | validateField | el método para validar un determinado form item | Function(prop: string, callback: Function(errorMessage: string)) |
 | resetFields   | restablece todos los campos y elimina el resultado de validación | —                                        |
-| clearValidate |limpieza de validación para determinados campos. El parámetro es un conjunto de nombres de propiedad de los elementos del formulario cuyos mensajes de validación se eliminarán. Si se omiten, se borrarán todos los mensajes de validación de los campos. | Function(props: array)
+| clearValidate | limpieza de validación para determinados campos. El parámetro es un conjunto de nombres de propiedad de los elementos del formulario cuyos mensajes de validación se eliminarán. Si se omiten, se borrarán todos los mensajes de validación de los campos.                                           | Function(props: array)                                           |
 
 ### Form Events
+
 | Nombre   | Descripción                                          | Parametros                                                   |
-| -------- | ---------------------------------------------------- | ------------------------------------------------------------ |
+| -------- | ---------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
 | validate | se dispara después de validar un item del formulario | la propiedad (`prop name`) nombre del item del form que se esta validando, si la validacion paso o no. |
 
 ### Form-Item Atributos
 
 | Atributo       | Descripción                              | Tipo    | Valores aceptados                   | Por defecto |
-| -------------- | ---------------------------------------- | ------- | ----------------------------------- | ----------- |
+| -------------- | ------------------------------------------------------------------------------------------------------------------- | ------- | ----------------------------------- | ----------- |
 | prop           | un key de `model`. En el uso del método validate and resetFields, el atributo es obligatorio. | string  | keys of model that passed to `form` |             |
 | label          | etiqueta                                 | string  | —                                   | —           |
 | label-width    | ancho de la etiqueta, e.g. '50px'        | string  | —                                   | —           |
@@ -879,14 +889,21 @@ Todos los componentes de un formulario heredan su atributo `size`. De manera sim
 | size           | Tamaño de los componentes en este form item | string  | large / medium / small / mini               | -           |
 
 ### Form-Item Slot
+
 | Nombre | Descripción              |
 | ------ | ------------------------ |
 | —      | contenido del Form Item  |
 | label  | contenido de la etiqueta |
 
+### Form-Item Scoped Slot
+
+| Name  | Description                                                                                        |
+| ----- | -------------------------------------------------------------------------------------------------- |
+| error | Contenido personalizado para mostrar el mensaje de validacion. El parametro del scope es { error } |
+
 ### Form-Item Metodo
 
 | Metodo     | Descripción                              | Parametros |
-| ---------- | ---------------------------------------- | ---------- |
+| ------------- | ----------------------------------------------------------- | ---------- |
 | resetField | restablecer campo actual y eliminar resultado de validación | —          |
 | clearValidate | elimina el estado de la validacion de un campo | - |

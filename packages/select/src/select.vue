@@ -47,7 +47,7 @@
         class="el-select__input"
         :class="[selectSize ? `is-${ selectSize }` : '']"
         :disabled="selectDisabled"
-        :autocomplete="autoComplete"
+        :autocomplete="autoComplete || autocomplete"
         @focus="handleFocus"
         @blur="softFocus = false"
         @click.stop
@@ -74,7 +74,7 @@
       :placeholder="currentPlaceholder"
       :name="name"
       :id="id"
-      :auto-complete="autoComplete"
+      :autocomplete="autoComplete || autocomplete"
       :size="selectSize"
       :disabled="selectDisabled"
       :readonly="readonly"
@@ -260,9 +260,18 @@
       value: {
         required: true
       },
-      autoComplete: {
+      autocomplete: {
         type: String,
         default: 'off'
+      },
+      /** @Deprecated in next major version */
+      autoComplete: {
+        type: String,
+        validator(val) {
+          process.env.NODE_ENV !== 'production' &&
+            console.warn('[Element Warn][Select]\'auto-complete\' property will be deprecated in next major version. please use \'autocomplete\' instead.');
+          return true;
+        }
       },
       automaticDropdown: Boolean,
       size: String,
@@ -311,6 +320,7 @@
         selected: this.multiple ? [] : {},
         inputLength: 20,
         inputWidth: 0,
+        initialInputHeight: 0,
         cachedPlaceHolder: '',
         optionsCount: 0,
         filteredOptionsCount: 0,
@@ -647,7 +657,7 @@
           let inputChildNodes = this.$refs.reference.$el.childNodes;
           let input = [].filter.call(inputChildNodes, item => item.tagName === 'INPUT')[0];
           const tags = this.$refs.tags;
-          const sizeInMap = sizeMap[this.selectSize] || 32;
+          const sizeInMap = this.initialInputHeight || 32;
           input.style.height = this.selected.length === 0
             ? sizeInMap + 'px'
             : Math.max(
@@ -862,12 +872,17 @@
         this.currentPlaceholder = '';
       }
       addResizeListener(this.$el, this.handleResize);
+
+      const reference = this.$refs.reference;
+      if (reference && reference.$el) {
+        this.initialInputHeight = reference.$el.getBoundingClientRect().height;
+      }
       if (this.remote && this.multiple) {
         this.resetInputHeight();
       }
       this.$nextTick(() => {
-        if (this.$refs.reference && this.$refs.reference.$el) {
-          this.inputWidth = this.$refs.reference.$el.getBoundingClientRect().width;
+        if (reference && reference.$el) {
+          this.inputWidth = reference.$el.getBoundingClientRect().width;
         }
       });
       this.setSelected();

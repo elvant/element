@@ -163,6 +163,7 @@ export default {
 }
 </script>
 ```
+
 :::
 
 ### Disabled
@@ -186,6 +187,7 @@ export default {
 }
 </script>
 ```
+
 :::
 
 ### Input con icono
@@ -242,6 +244,7 @@ export default {
 }
 </script>
 ```
+
 :::
 
 ### Textarea
@@ -268,6 +271,7 @@ export default {
 }
 </script>
 ```
+
 :::
 
 ### Textarea tamaño automatico
@@ -302,6 +306,7 @@ export default {
 }
 </script>
 ```
+
 :::
 
 ### Mezclando elementos con input
@@ -353,6 +358,7 @@ export default {
 }
 </script>
 ```
+
 :::
 
 ### Tamaño
@@ -395,6 +401,7 @@ export default {
 }
 </script>
 ```
+
 :::
 
 ### Autocompletado
@@ -469,6 +476,7 @@ Puede obtener algunas sugerencias basadas en la entrada actual.
   }
 </script>
 ```
+
 :::
 
 ### Template personalizado
@@ -557,6 +565,7 @@ Personalice cómo se muestran las sugerencias.
   }
 </script>
 ```
+
 :::
 
 ### Búsqueda remota
@@ -564,6 +573,7 @@ Personalice cómo se muestran las sugerencias.
 Búsqueda de datos desde el servidor.
 
 :::demo
+
 ```html
 <el-autocomplete
   v-model="state4"
@@ -616,12 +626,13 @@ Búsqueda de datos desde el servidor.
   };
 </script>
 ```
+
 :::
 
 ### Input atributos
 
 | Atributo      | Descripción                              | Tipo             | Valores aceptados                | Por defecto |
-| ------------- | ---------------------------------------- | ---------------- | -------------------------------- | ----------- |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
 | type          | tipo de input                            | string           | text, textarea y otros [tipos de entrada nativos](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input#Form_%3Cinput%3E_types)  | text        |
 | value         | valor enlazado                           | string / number  | —                                | —           |
 | maxlength     | igual que `maxlength` en el input nativo | number           | —                                | —           |
@@ -633,7 +644,8 @@ Búsqueda de datos desde el servidor.
 | suffix-icon   | clase del icono de sufijo                | string           | —                                | —           |
 | rows          | número de filas, sólo funciona cuando `type` es 'textarea'. | number           | —                                | 2           |
 | autosize      | si textarea tiene una altura adaptativa, sólo funciona cuando el`type` es 'textarea'. Puede aceptar un objeto, p. ej. { minRows: 2, maxRows: 6 } | boolean / object | —                                | false       |
-| auto-complete | igual que `auto-complete` en el input nativo | string           | on/off                           | off         |
+| autocomplete  | igual que `autocomplete` en el input nativo                                                                                                      | string           | on/off                                                                                                                                  | off         |
+| auto-complete | @DEPRECATED en el proximo cambio mayor de version                                                                                                | string           | on/off                                                                                                                                  | off         |
 | name          | igual que `name` en el input nativo      | string           | —                                | —           |
 | readonly      | igual que `readonly` en el input nativo  | boolean          | —                                | false       |
 | max           | igual que `max` en el input nativo       | —                | —                                | —           |
@@ -657,7 +669,7 @@ Búsqueda de datos desde el servidor.
 ### Input eventos
 
 | Nombre | Descripción                              | Parametros                |
-| ------ | ---------------------------------------- | ------------------------- |
+| ------ | ------------------------------------------------------------------------------------------ | ------------------------- |
 | blur   | Se dispara cuando se pierde el foco      | (event: Event)            |
 | focus  | Se dispara cuando se obtiene el foco     | (event: Event)            |
 | change | se activa cuando cambia el valor de entrada | (value: string \| number) |
@@ -673,8 +685,8 @@ Búsqueda de datos desde el servidor.
 
 ### Autocomplete Atributos
 
-Atributo | Descripción | Tipo | Opciones | Por defecto
-|----| ----| ----| ---- | -----|
+| Atributo              | Descripción                                                                                                                                        | Tipo                            | Opciones                                                       | Por defecto  |
+| --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------------- | ------------ |
 |placeholder| el placeholder del Autocomplete| string | — | — |
 |disabled | si el Autocompete esta deshabilitado  | boolean | — | false|
 | value-key | nombre del campo del objeto de sugerencia del input para la visualización | string | — | value |
@@ -705,13 +717,13 @@ Atributo | Descripción | Tipo | Opciones | Por defecto
 ### Autocomplete Scoped Slot
 
 | Name | Description |
-|------|--------|
-| — | Custom content for input suggestions. The scope parameter is { item } |
+| ---- | ---------------------------------------------------------------------------------------- |
+| —    | Contenido personalizado para el input de sugerencias. El parametro del scope es { item } |
 
 ### Autocomplete Eventos
 
 | Nombre | Descripción                              | Parametros                               |
-| ------ | ---------------------------------------- | ---------------------------------------- |
+| ------ | ------------------------------------------------ | ------------------------------------------- |
 | select | se dispara cuando se hace click a una sugerencia | sugerencia en la que se está haciendo click |
 
 ### Autocomplete Metodo
