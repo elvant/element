@@ -152,12 +152,12 @@
   import NavigationMixin from './navigation-mixin';
   import { isKorean } from 'element-ui/src/utils/shared';
 
-  const sizeMap = {
-    'large': 40,
-    // 'medium': 32,
-    'small': 28,
-    'mini': 24
-  };
+  // const sizeMap = {
+  //   'large': 40,
+  //   // 'medium': 32,
+  //   'small': 28,
+  //   'mini': 24
+  // };
 
   export default {
     mixins: [Emitter, Locale, Focus('reference'), NavigationMixin],
