@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style>
   .el-header, .el-footer {
     background-color: #7dbcea;
@@ -57,6 +58,8 @@
   };
 </script>
 
+=======
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 ## Container 布局容器
 用于布局的容器组件，方便快速搭建页面的基本结构：
 

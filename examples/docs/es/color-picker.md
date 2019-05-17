@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
   export default {
     data() {
@@ -57,6 +58,8 @@
   }
 </style>
 
+=======
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 ## ColorPicker
 
 ColorPicker es un selector de color que soporta varios formatos de color.
@@ -91,13 +94,13 @@ ColorPicker es un selector de color que soporta varios formatos de color.
 
 :::demo ColorPicker soporta selección de canales alpha. Para activarlo sólo agrege el atributo `show-alpha`.
 ```html
-<el-color-picker v-model="color3" show-alpha></el-color-picker>
+<el-color-picker v-model="color" show-alpha></el-color-picker>
 
 <script>
   export default {
     data() {
       return {
-        color3: 'rgba(19, 206, 102, 0.8)'
+        color: 'rgba(19, 206, 102, 0.8)'
       }
     }
   };
@@ -110,7 +113,7 @@ ColorPicker es un selector de color que soporta varios formatos de color.
 :::demo ColorPicker supports predefined color options
 ```html
 <el-color-picker
-  v-model="color5"
+  v-model="color"
   show-alpha
   :predefine="predefineColors">
 </el-color-picker>
@@ -119,7 +122,7 @@ ColorPicker es un selector de color que soporta varios formatos de color.
   export default {
     data() {
       return {
-        color5: 'rgba(255, 69, 0, 0.68)',
+        color: 'rgba(255, 69, 0, 0.68)',
         predefineColors: [
           '#ff4500',
           '#ff8c00',
@@ -147,17 +150,28 @@ ColorPicker es un selector de color que soporta varios formatos de color.
 
 :::demo
 ```html
+<<<<<<< HEAD
 <el-color-picker v-model="color4"></el-color-picker>
 <el-color-picker v-model="color4" size="large"></el-color-picker>
 <el-color-picker v-model="color4" size="medium"></el-color-picker>
 <el-color-picker v-model="color4" size="small"></el-color-picker>
 <el-color-picker v-model="color4" size="mini"></el-color-picker>
+=======
+<el-color-picker v-model="color"></el-color-picker>
+<el-color-picker v-model="color" size="medium"></el-color-picker>
+<el-color-picker v-model="color" size="small"></el-color-picker>
+<el-color-picker v-model="color" size="mini"></el-color-picker>
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 
 <script>
   export default {
     data() {
       return {
+<<<<<<< HEAD
         color4: '#1890ff'
+=======
+        color: '#409EFF'
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
       }
     }
   };
@@ -166,6 +180,7 @@ ColorPicker es un selector de color que soporta varios formatos de color.
 :::
 
 ### Atributos
+<<<<<<< HEAD
 | Atributo     | Descripción                              | Tipo    | Valores aceptados     | Por defecto                              |
 | ------------ | ---------------------------------------- | ------- | --------------------- | ---------------------------------------- |
 | disabled     | especifica si se deshabilita el ColorPicker | boolean | —                     | false                                    |
@@ -174,6 +189,17 @@ ColorPicker es un selector de color que soporta varios formatos de color.
 | color-format | formato de color del `v-model`           | string  | hsl / hsv / hex / rgb | hex (si show-alpha es false)/ rgb (si show-alpha es true) |
 | popper-class | nombre de clase para el dropdown del ColorPicker | string  | —                     | —                                        |
 | predefine    | opciones de colores predefinidas | array | — | — |
+=======
+| Atributo       | Descripción                              | Tipo    | Valores aceptados     | Por defecto                              |
+| -------------- | ---------------------------------------- | ------- | --------------------- | ---------------------------------------- |
+| value / v-model | valor enlazado                           | string  | —                     | —                                        |
+| disabled       | especifica si se deshabilita el ColorPicker | boolean | —                     | false                                    |
+| size           | tamaño del ColorPicker                   | string  | —                     | medium / small / mini                    |
+| show-alpha     | especifica si se muestra el control deslizante para el valor alpha | boolean | —                     | false                                    |
+| color-format   | formato de color del `v-model`           | string  | hsl / hsv / hex / rgb | hex (si show-alpha es false)/ rgb (si show-alpha es true) |
+| popper-class   | nombre de clase para el dropdown del ColorPicker | string  | —                     | —                                        |
+| predefine      | opciones de colores predefinidas | array | — | — |
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 
 ### Eventos
 | Nombre de Evento | Descripción                              | Parametros             |

@@ -153,6 +153,7 @@ import Vue from 'vue'
 
 Vue.component(CollapseTransition.name, CollapseTransition)
 ```
+<<<<<<< HEAD
 
 <style>
   .transition-box {
@@ -178,3 +179,5 @@ Vue.component(CollapseTransition.name, CollapseTransition)
     })
   }
 </script>
+=======
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5

@@ -1,22 +1,3 @@
-<script>
-  export default {
-    methods: {
-      hello() {
-        alert('Hello World!');
-      }
-    }
-  }
-</script>
-<style>
-  .demo-box.demo-alert .el-alert {
-    margin: 20px 0 0;
-  }
-
-  .demo-box.demo-alert .el-alert:first-child {
-    margin: 0;
-  }
-</style>
-
 ## Alert
 
 Mostrar mensajes de alertas importantes.
@@ -49,7 +30,38 @@ Los componentes de alertas no son elementos overlay de la página y no desaparec
 ```
 :::
 
-### Personalización del botón de cerrar 
+### Theme
+
+Alert provee dos diferentes temas  `light` y `dark`.
+
+:::demo Use `effect` para cambiar el tema, por defecto es `light`.
+```html
+<template>
+  <el-alert
+    title="success alert"
+    type="success"
+    effect="dark">
+  </el-alert>
+  <el-alert
+    title="info alert"
+    type="info"
+    effect="dark">
+  </el-alert>
+  <el-alert
+    title="warning alert"
+    type="warning"
+    effect="dark">
+  </el-alert>
+  <el-alert
+    title="error alert"
+    type="error"
+    effect="dark">
+  </el-alert>
+</template>
+```
+:::
+
+### Personalización del botón de cerrar
 
 Personalizar el botón de cerrar como texto u otros símbolos.
 
@@ -245,15 +257,24 @@ Mostrar alerta como un banner en la parte superior de la página.
 ### Atributos
 | Atributo    | Descripción                              | Tipo    | Valores aceptados          | Por defecto |
 | ----------- | ---------------------------------------- | ------- | -------------------------- | ----------- |
-| title       | título. Requerido                        | string  | —                          | —           |
+| title       | título                                   | string  | —                          | —           |
 | type        | tipo de componente                       | string  | success/warning/info/error | info        |
 | description | texto descriptivo. También puede ser pasado con el slot por defecto | string  | —                          | —           |
 | closable    | si se puede cerrar o no                  | boolean | —                          | true        |
 | center      | si el texto debe estar centrado          | boolean | —                          | false       |
 | close-text  | texto de cerrado personalizado           | string  | —                          | —           |
 | show-icon   | si un icono del tipo de alerta se debe mostrar | boolean | —                          | false       |
+<<<<<<< HEAD
 | banner   | si mostrar como pancarta | boolean | —                          | false       |
+=======
+| effect | Choose theme  | string | light/dark | light |
 
+### Slot
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
+
+| Name | Description |
+|------|--------|
+| title | El contenido del título de alerta. |
 
 ### Eventos
 | Nombre del evento | Descripción                           | Parámetros |

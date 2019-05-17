@@ -1,53 +1,3 @@
-<style>
-  .demo-pagination .source.first {
-    padding: 0;
-  }
-
-  .demo-pagination .first .block {
-    padding: 30px 0;
-    text-align: center;
-    border-right: solid 1px #EFF2F6;
-    display: inline-block;
-    width: 50%;
-    box-sizing: border-box;
-    
-    &:last-child {
-      border-right: none;
-    }
-  }
-
-  .demo-pagination .first .demonstration {
-    display: block;
-    color: #8492a6;
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
-
-  .demo-pagination .source.last {
-    padding: 0;
-  }
-
-  .demo-pagination .last .block {
-    padding: 30px 24px;
-    border-bottom: solid 1px #EFF2F6;
-    &:last-child {
-      border-bottom: none;
-    }
-  }
-
-  .demo-pagination .last .demonstration {
-    font-size: 14px;
-    color: #8492a6;
-    line-height: 44px;
-  }
-
-  .demo-pagination .last .demonstration + .el-pagination {
-    float: right;
-    width: 70%;
-    margin: 5px 20px 0 0;
-  }
-</style>
-
 ## Paginación
 Si tiene que mostrar muchos datos en una página, utilice la paginación.
 
@@ -72,9 +22,9 @@ Si tiene que mostrar muchos datos en una página, utilice la paginación.
 ```
 :::
 
-### Number of pagers
+### Numeros de paginas
 
-:::demo By default, Pagination collapses extra pager buttons when it has more than 7 pages. This can be configured with the `pager-count` attribute.
+:::demo De forma predeterminada, Pagination colapsa los botones del paginador adicionales cuando tiene más de 7 páginas. Esto se puede configurar con el atributo `pager-count`.
 ```html
 <el-pagination
   :page-size="20"
@@ -181,37 +131,39 @@ Agrega más modulos basados en su escenario.
   }
 </script>
 ```
+
 :::
+### Oculte la paginación cuando el resultado es solo una pagina simple
+
+Cuando sólo hay una página, oculte la paginación configurando el atributo `hide-on-single-page`.
+
+:::demo
+```html
+<div>
+ <el-switch v-model="value">
+ </el-switch>
+ <el-pagination
+  :hide-on-single-page="value"
+  :total="5"
+  layout="prev, pager, next">
+</el-pagination>
+</div>
+
 <script>
+<<<<<<< HEAD
   import { addClass } from 'elvant/src/utils/dom';
+=======
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
   export default {
     data() {
       return {
-        currentPage1: 5,
-        currentPage2: 5,
-        currentPage3: 5,
-        currentPage4: 4
-      };
-    },
-    methods: {
-      handleSizeChange(val) {
-        console.log(`${val} items per page`);
-      },
-      handleCurrentChange(val) {
-        console.log(`current page: ${val}`);
+        value: false
       }
-    },
-    mounted() {
-      this.$nextTick(() => {
-        let demos = document.querySelectorAll('.source');
-        let firstDemo = demos[0];
-        let lastDemo = demos[demos.length - 1];
-        addClass(firstDemo, 'first');
-        addClass(lastDemo, 'last');
-      });
     }
   }
 </script>
+```
+:::
 
 ### Atributos
 | Atributo     | Descripción                              | Tipo     | Valores aceptados                        | Por defecto                            |
@@ -227,7 +179,8 @@ Agrega más modulos basados en su escenario.
 | popper-class | clase propia para el `dropdown` del `select` del número de páginas | string   | —                                        | —                                      |
 | prev-text    | texto para el botón `prev`               | string   | —                                        | —                                      |
 | next-text    | texto para el botón `next`               | string   | —                                        | —                                      |
-| disabled | si Pagination esta disabled | boolean | — | false |
+| disabled     | si Pagination esta disabled              | boolean  | —                                        | false                                  |
+| hide-on-single-page | si ocultar cuando sólo hay una página | boolean |—                                 | -                                      |
 
 ### Eventos
 | Nombre del evento | Descripción                             | Parámetros                    |

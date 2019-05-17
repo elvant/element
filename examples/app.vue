@@ -172,7 +172,6 @@
     }
   }
 </style>
-
 <template>
   <div id="app" :class="{ 'is-component': isComponent }">
     <main-header v-if="lang !== 'play'"></main-header>
@@ -188,6 +187,7 @@
   import zhLocale from 'main/locale/lang/zh-CN';
   import enLocale from 'main/locale/lang/en';
   import esLocale from 'main/locale/lang/es';
+  import frLocale from 'main/locale/lang/fr';
 
   const lang = location.hash.replace('#', '').split('/')[1] || 'zh-CN';
   const localize = lang => {
@@ -197,6 +197,9 @@
         break;
       case 'es':
         use(esLocale);
+        break;
+      case 'fr-FR':
+        use(frLocale);
         break;
       default:
         use(enLocale);
@@ -231,14 +234,13 @@
 
         const href = location.href;
         const preferGithub = localStorage.getItem('PREFER_GITHUB');
-        if (href.indexOf('element-cn') > -1 || href.indexOf('element.faas') > -1 || preferGithub) return;
+        const cnHref = href.indexOf('eleme.cn') > -1 || href.indexOf('element-cn') > -1 || href.indexOf('element.faas') > -1;
+        if (cnHref || preferGithub) return;
         setTimeout(() => {
           if (this.lang !== 'zh-CN') return;
           this.$confirm('建议用户访问部署在国内的站点，是否跳转？', '提示')
             .then(() => {
-              location.href = location.href
-                .replace('https:', 'http:')
-                .replace('element.', 'element-cn.');
+              location.replace('https://element.eleme.cn');
             })
             .catch(() => {
               localStorage.setItem('PREFER_GITHUB', 'true');
@@ -252,30 +254,6 @@
       if (this.lang === 'zh-CN') {
         this.suggestJump();
       }
-      // setTimeout(() => {
-      //   const notified = localStorage.getItem('ES_NOTIFIED_2');
-      //   if (!notified && this.lang !== 'es') {
-      //     const title = this.lang === 'zh-CN'
-      //       ? '西班牙语文档正式上线'
-      //       : 'Spanish docs now available';
-      //     const message = this.lang === 'zh-CN'
-      //       ? '点击这里进行切换'
-      //       : 'Click here to switch';
-      //     const self = this;
-      //     this.$notify({
-      //       title,
-      //       duration: 0,
-      //       message,
-      //       onClick() {
-      //         self.$router.push('/es');
-      //         localStorage.setItem('ES_NOTIFIED_2', 1);
-      //       },
-      //       onClose() {
-      //         localStorage.setItem('ES_NOTIFIED_2', 1);
-      //       }
-      //     });
-      //   }
-      // }, 3500);
     }
   };
 </script>

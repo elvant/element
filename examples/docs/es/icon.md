@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
   var iconList = require('examples/icon.json');
   import IconSet from 'examples/components/IconSet.vue';
@@ -74,6 +75,8 @@
   }
 </style>
 
+=======
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 ## Icon
 
 Element proporciona un conjunto de iconos propios.
@@ -96,7 +99,7 @@ Simplemente asigna el nombre de la clase a `el-icon-iconName`.
 ### Iconos
 
 <ul class="icon-list">
-  <li v-for="name in icons" :key="name">
+  <li v-for="name in $icon" :key="name">
     <span>
       <i :class="'el-icon-' + name"></i>
       <span class="icon-name">{{'el-icon-' + name}}</span>

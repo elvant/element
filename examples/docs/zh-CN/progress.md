@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
 export default {
   data() {
@@ -20,6 +21,8 @@ export default {
   }
 </style>
 
+=======
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 ## Progress 进度条
 
 用于展示操作进度，告知用户当前状态和预期。
@@ -59,6 +62,7 @@ export default {
 <el-progress type="circle" :percentage="80" color="#8e71c7"></el-progress>
 <el-progress type="circle" :percentage="100" status="success"></el-progress>
 <el-progress type="circle" :percentage="50" status="exception"></el-progress>
+<el-progress type="circle" :percentage="100" status="text">Done</el-progress>
 ```
 :::
 
@@ -91,7 +95,7 @@ export default {
 | type          | 进度条类型           | string         | line/circle | line |
 | stroke-width  | 进度条的宽度，单位 px | number          | — | 6 |
 | text-inside  | 进度条显示文字内置在进度条内（只在 type=line 时可用） | boolean | — | false |
-| status  | 进度条当前状态 | string | success/exception | — |
+| status  | 进度条当前状态 | string | success/exception/text | — |
 | color  | 进度条背景色（会覆盖 status 状态颜色） | string | — | — |
 | width  | 环形进度条画布宽度（只在 type=circle 时可用） | number |  | 126 |
 | show-text  | 是否显示进度条文字内容 | boolean | — | true |

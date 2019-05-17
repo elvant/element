@@ -1,86 +1,3 @@
-<script>
-  module.exports = {
-    methods: {
-      open() {
-        this.$message('This is a message.');
-      },
-    
-      openVn() {
-        const h = this.$createElement;
-        this.$message({
-          message: h('p', null, [
-            h('span', null, 'Message can be '),
-            h('i', { style: 'color: teal' }, 'VNode')
-          ])
-        });
-      },
-    
-      open2() {
-        this.$message({
-          message: 'Congrats, this is a success message.',
-          type: 'success'
-        });
-      },
-    
-      open3() {
-        this.$message({
-          message: 'Warning, this is a warning message.',
-          type: 'warning'
-        });
-      },
-    
-      open4() {
-        this.$message.error('Oops, this is a error message.');
-      },
-    
-      open5() {
-        this.$message({
-          showClose: true,
-          message: 'This is a message.'
-        });
-      },
-    
-      open6() {
-        this.$message({
-          showClose: true,
-          message: 'Congrats, this is a success message.',
-          type: 'success'
-        });
-      },
-    
-      open7() {
-        this.$message({
-          showClose: true,
-          message: 'Warning, this is a warning message.',
-          type: 'warning'
-        });
-      },
-    
-      open8() {
-        this.$message({
-          showClose: true,
-          message: 'Oops, this is a error message.',
-          type: 'error'
-        });
-      },
-    
-      openCenter() {
-        this.$message({
-          message: 'Centered text',
-          center: true
-        });
-      },
-    
-      openHTML() {
-        this.$message({
-          dangerouslyUseHTMLString: true,
-          message: '<strong>This is <i>HTML</i> string</strong>'
-        });
-      }
-    }
-  };
-</script>
-
 ## Message
 
 Utilizado para mostrar retroalimentacion despues de una actividad. La diferencia con el componente Notification es que este ultimo es utilizado para mostrar una notificacion pasiva a nivel de sistema.
@@ -128,14 +45,14 @@ Utilizados para mostrar retroalimentacion de Success, Warning, Message y Error a
 <template>
   <el-button :plain="true" @click="open2">success</el-button>
   <el-button :plain="true" @click="open3">warning</el-button>
-  <el-button :plain="true" @click="open">message</el-button>
+  <el-button :plain="true" @click="open1">message</el-button>
   <el-button :plain="true" @click="open4">error</el-button>
 </template>
 
 <script>
   export default {
     methods: {
-      open() {
+      open1() {
         this.$message('This is a message.');
       },
       open2() {
@@ -168,23 +85,23 @@ Un boton para cerrar que puede ser agregado.
 :::demo Un componente Message predeterminado no se puede cerrar manualmente. Si necesitas un componente message que pueda cerrarse, puedes establecer el campo `showClose`. Ademas, al igual que las notificaciones, message tiene un atriubuto `duration` que puede ser controlado. Por defecto la duracion es de 3000 ms, y no desaparecera al llegar a `0`.
 ```html
 <template>
-  <el-button :plain="true" @click="open5">message</el-button>
-  <el-button :plain="true" @click="open6">success</el-button>
-  <el-button :plain="true" @click="open7">warning</el-button>
-  <el-button :plain="true" @click="open8">error</el-button>
+  <el-button :plain="true" @click="open1">message</el-button>
+  <el-button :plain="true" @click="open2">success</el-button>
+  <el-button :plain="true" @click="open3">warning</el-button>
+  <el-button :plain="true" @click="open4">error</el-button>
 </template>
 
 <script>
   export default {
     methods: {
-      open5() {
+      open1() {
         this.$message({
           showClose: true,
           message: 'This is a message.'
         });
       },
 
-      open6() {
+      open2() {
         this.$message({
           showClose: true,
           message: 'Congrats, this is a success message.',
@@ -192,7 +109,7 @@ Un boton para cerrar que puede ser agregado.
         });
       },
 
-      open7() {
+      open3() {
         this.$message({
           showClose: true,
           message: 'Warning, this is a warning message.',
@@ -200,7 +117,7 @@ Un boton para cerrar que puede ser agregado.
         });
       },
 
-      open8() {
+      open4() {
         this.$message({
           showClose: true,
           message: 'Oops, this is a error message.',

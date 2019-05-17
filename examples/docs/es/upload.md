@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <style>
   .upload-tip {
     color: #8492a6;
@@ -114,6 +115,8 @@
     }
   }
 </script>
+=======
+>>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 ## Carga de archivos
 
 Carga archivos haciendo clic o arrastrándolos.
@@ -275,7 +278,7 @@ Utilice la propiedad `list-type` para cambiar el estilo a un listado de archivos
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-preview="handlePreview"
   :on-remove="handleRemove"
-  :file-list="fileList2"
+  :file-list="fileList"
   list-type="picture">
   <el-button size="small" type="primary">Clic para subir archivo</el-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
@@ -284,7 +287,7 @@ Utilice la propiedad `list-type` para cambiar el estilo a un listado de archivos
   export default {
     data() {
       return {
-        fileList2: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
+        fileList: [{name: 'food.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}, {name: 'food2.jpeg', url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'}]
       };
     },
     methods: {
@@ -310,7 +313,7 @@ Utilice el _hook_ `on-change` para controlar la funcionalidad de la lista de arc
   class="upload-demo"
   action="https://jsonplaceholder.typicode.com/posts/"
   :on-change="handleChange"
-  :file-list="fileList3">
+  :file-list="fileList">
   <el-button size="small" type="primary">Clic para subir archivo</el-button>
   <div slot="tip" class="el-upload__tip">Solo archivos jpg/png con un tamaño menor de 500kb</div>
 </el-upload>
@@ -318,7 +321,7 @@ Utilice el _hook_ `on-change` para controlar la funcionalidad de la lista de arc
   export default {
     data() {
       return {
-        fileList3: [{
+        fileList: [{
           name: 'food.jpeg',
           url: 'https://fuss10.elemecdn.com/3/63/4e7f3a15429bfda99bce42a18cdd1jpeg.jpeg?imageMogr2/thumbnail/360x360/format/webp/quality/100'
         }, {
@@ -329,7 +332,7 @@ Utilice el _hook_ `on-change` para controlar la funcionalidad de la lista de arc
     },
     methods: {
       handleChange(file, fileList) {
-        this.fileList3 = fileList.slice(-3);
+        this.fileList = fileList.slice(-3);
       }
     }
   }
@@ -423,4 +426,4 @@ Puede arrastrar el archivo dentro de un área en especifico para cargar el archi
 | ----------------- | ---------------------------------------- | ------------------------- |
 | clearFiles        | limpia la lista de archivos cargados (este método no esta soportado en el _hook_ `before-upload`) | —                         |
 | abort             | cancela la petición de carga             | （ file: fileList's item ） |
-| submit            | Upload the file list manually            |  —                         |
+| submit            | La lista de archivos se sube manualmente |  —                         |

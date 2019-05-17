@@ -54,7 +54,7 @@
   </footer>
 </template>
 
-<style>
+<style lang="scss">
   .footer {
     background-color: #F7FBFD;
     width: 100%;
@@ -173,7 +173,8 @@
 
 <script type="text/babel">
   import compoLang from '../i18n/component.json';
-  import { version } from 'main/index.js';
+  import Element from 'main/index.js';
+  const { version } = Element;
 
   export default {
     data() {
