@@ -264,13 +264,10 @@ Mostrar alerta como un banner en la parte superior de la página.
 | center      | si el texto debe estar centrado          | boolean | —                          | false       |
 | close-text  | texto de cerrado personalizado           | string  | —                          | —           |
 | show-icon   | si un icono del tipo de alerta se debe mostrar | boolean | —                          | false       |
-<<<<<<< HEAD
 | banner   | si mostrar como pancarta | boolean | —                          | false       |
-=======
 | effect | Choose theme  | string | light/dark | light |
 
 ### Slot
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 
 | Name | Description |
 |------|--------|

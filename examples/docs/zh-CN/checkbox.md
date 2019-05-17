@@ -259,12 +259,9 @@
 ### Checkbox-group Attributes
 | 参数      | 说明    | 类型      | 可选值       | 默认值   |
 |---------- |-------- |---------- |-------------  |-------- |
-<<<<<<< HEAD
 | size     | 多选框组尺寸，仅对按钮形式的 Checkbox 或带有边框的 Checkbox 有效   | string  | large / medium / small / mini  |    —     |
-=======
 | value / v-model | 绑定值 | array | — | — |
 | size     | 多选框组尺寸，仅对按钮形式的 Checkbox 或带有边框的 Checkbox 有效   | string  | medium / small / mini  |    —     |
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 | disabled  | 是否禁用    | boolean   | — | false   |
 | min     | 可被勾选的 checkbox 的最小数量   | number    |       —        |     —    |
 | max     | 可被勾选的 checkbox 的最大数量   | number    |       —        |     —    |

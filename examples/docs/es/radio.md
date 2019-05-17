@@ -192,12 +192,8 @@ Radio con estilo de botón.
 
 | Atributo   | Descripción                              | Tipo    | Valores Aceptado      | Valores por defecto |
 | ---------- | ---------------------------------------- | ------- | --------------------- | ------------------- |
-<<<<<<< HEAD
 | size       | tamaño de los `radio buttons` o `bordered radios` | string  | large / medium / small / mini | —                   |
-=======
 | value / v-model | valor enlazado | string / number / boolean | — | — |
-| size       | tamaño de los `radio buttons` o `bordered radios` | string  | medium / small / mini | —                   |
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 | disabled   | si la anidación de radios está desahabilitada | boolean | —                     | false               |
 | text-color | color de las letras cuando el botón está activo | string  | —                     | #ffffff             |
 | fill       | color del borde y fondo cuando el botón está activo | string  | —                     | #1890ff             |

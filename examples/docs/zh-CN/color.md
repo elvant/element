@@ -1,80 +1,3 @@
-<<<<<<< HEAD
-<style>
-  .demo-color-box {
-    border-radius: 4px;
-    padding: 20px;
-    margin: 5px 0;
-    height: 74px;
-    box-sizing: border-box;
-    color: #fff;
-    font-size: 14px;
-
-    & .value {
-      font-size: 12px;
-      opacity: 0.69;
-      line-height: 24px;
-    }
-  }
-  .demo-color-box-group {
-    .demo-color-box {
-      border-radius: 0;
-      margin: 0;
-    }
-    .demo-color-box:first-child {
-      border-radius: 4px 4px 0 0;
-    }
-    .demo-color-box:last-child {
-      border-radius: 0 0 4px 4px;
-    }
-  }
-  .bg-blue {
-    background-color: #1890ff;
-  }
-
-  .bg-success {
-    background-color: #52c41a;
-  }
-  .bg-warning {
-    background-color: #FFAB3F;
-  }
-  .bg-danger {
-    background-color: #FF0139;
-  }
-  .bg-info {
-    background-color: #1A8FE2;
-  }
-
-  .bg-text-primary {
-    background-color: #303133;
-  }
-  .bg-text-regular {
-    background-color: #606266;
-  }
-  .bg-text-secondary {
-    background-color: #909399;
-  }
-  .bg-text-placeholder {
-    background-color: #c0c4cc;
-  }
-
-  .bg-border-base {
-    background-color: #dcdfe6;
-  }
-  .bg-border-light {
-    background-color: #e4e7ed;
-  }
-  .bg-border-lighter {
-    background-color: #ebeef5;
-  }
-  .bg-border-extra-light {
-    background-color: #f2f6fc;
-  }
-
-  [class*=" bg-border-"] {
-    color: #303133;
-  }
-</style>
-=======
 <script>
   import bus from '../../bus';
   import { tintColor } from '../../color.js';
@@ -166,7 +89,7 @@
     },
   }
 </script>
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
+
 
 ## Color 色彩
 
@@ -177,10 +100,7 @@ Element 为了避免视觉传达差异，使用一套特定的调色板来规定
 Element 主要品牌颜色是鲜艳、友好的蓝色。
 
 <el-row :gutter="12">
-<<<<<<< HEAD
-  <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-blue">Blue<div class="value">#1890ff</div></div>
-=======
+
   <el-col :span="10" :xs="{span: 12}">
     <div class="demo-color-box" :style="{ background: primary }">Brand Color
       <div class="value">#409EFF</div>
@@ -193,7 +113,6 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
         ></div>
       </div>
     </div>
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
   </el-col>
 </el-row>
 
@@ -203,18 +122,6 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
 
 <el-row :gutter="12">
   <el-col :span="6" :xs="{span: 12}">
-<<<<<<< HEAD
-    <div class="demo-color-box bg-success">Success<div class="value">#52c41a</div></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-warning">Warning<div class="value">#FFAB3F</div></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-danger">Danger<div class="value">#FF0139</div></div>
-  </el-col>
-  <el-col :span="6" :xs="{span: 12}">
-    <div class="demo-color-box bg-info">Info<div class="value">#FF0139</div></div>
-=======
     <div class="demo-color-box"
     :style="{ background: success }"
     >Success<div class="value">#67C23A</div>
@@ -281,7 +188,6 @@ Element 主要品牌颜色是鲜艳、友好的蓝色。
         </div>
       </div>
     </div>
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
   </el-col>
 </el-row>
 

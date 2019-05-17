@@ -163,7 +163,6 @@ When there is only one page, hide the pagination by setting the `hide-on-single-
 </div>
 
 <script>
-  import { addClass } from 'elvant/src/utils/dom';
   export default {
     data() {
       return {

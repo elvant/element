@@ -115,21 +115,7 @@ Switch is used for switching between two opposing states.
 
 ### Attributes
 
-<<<<<<< HEAD
- Attribute      | Description          | Type      | Accepted Values       | Default
-----| ----| ----| ----|----
-disabled | whether Switch is disabled | boolean | — | false
-width | width of Switch | number | — | 40
-active-icon-class | class name of the icon displayed when in `on` state, overrides `active-text` | string | — | —
-inactive-icon-class |class name of the icon displayed when in `off` state, overrides `inactive-text`| string | — | —
-active-text | text displayed when in `on` state | string | — | —
-inactive-text | text displayed when in `off` state | string | — | —
-active-value  | switch value when in `on` state | boolean / string / number | — | true
-inactive-value  | switch value when in `off` state | boolean / string / number | — | false
-active-color | background color when in `on` state | string | — | #1890ff
-inactive-color | background color when in `off` state | string | — | #C0CCDA
-name| input name of Switch | string | — | —
-=======
+
 | Attribute      | Description          | Type      | Accepted Values       | Default |
 |-----| ----| ----| ----|---- |
 | value / v-model | binding value | boolean / string / number | — | — |
@@ -145,7 +131,7 @@ name| input name of Switch | string | — | —
 | inactive-color | background color when in `off` state | string | — | #C0CCDA |
 | name           | input name of Switch | string | — | — |
 | validate-event | whether to trigger form validation | boolean | - | true |
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
+
 
 ### Events
 

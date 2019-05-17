@@ -260,12 +260,9 @@ Checkbox con estilo tipo Botón.
 ### Atributos de Checkbox-group
 | Atributo   | Descripción                              | Tipo    | Valores aceptados     | Por Defecto |
 | ---------- | ---------------------------------------- | ------- | --------------------- | ----------- |
-<<<<<<< HEAD
 | size       | tamaño de los checkboxes de tipo botón o los checkboxes con border | string  | large / medium / small / mini | —           |
-=======
 | value / v-model | valor enlazado | array | — | — |
 | size       | tamaño de los checkboxes de tipo botón o los checkboxes con border | string  | medium / small / mini | —           |
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 | disabled   | especifica si los checkboxes anidados están deshabilitados | boolean | —                     | false       |
 | min        | cantidad mínima de checkboxes que deben ser marcados | number  | —                     | —           |
 | max        | cantidad máxima de checkboxes que pueden ser marcados | number  | —                     | —           |

@@ -109,24 +109,15 @@ Vue.use(ElementUI)
 如果是搭配 `babel-plugin-component` 一起使用，只需要修改 `.babelrc` 的配置，指定 `styleLibraryName` 路径为自定义主题相对于 `.babelrc` 的路径，注意要加 `~`。
 ```json
 {
-<<<<<<< HEAD
-  "plugins": [["component", [
-    {
-      "libraryName": "elvant",
-      "styleLibraryName": "~theme"
-    }
-  ]]]
-=======
   "plugins": [
     [
       "component",
       {
-        "libraryName": "element-ui",
+        "libraryName": "elvant",
         "styleLibraryName": "~theme"
       }
     ]
   ]
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 }
 ```
 

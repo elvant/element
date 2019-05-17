@@ -575,19 +575,7 @@ export default {
 
 | Atributo      | Descripción                              | Tipo             | Valores aceptados                | Por defecto |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-<<<<<<< HEAD
-| type          | tipo de input                            | string           | text, textarea y otros [tipos de entrada nativos](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input#Form_%3Cinput%3E_types)  | text        |
-| value         | valor enlazado                           | string / number  | —                                | —           |
-| maxlength     | igual que `maxlength` en el input nativo | number           | —                                | —           |
-| minlength     | igual que `minlength` en el input nativo | number           | —                                | —           |
-| placeholder   | placeholder del Input                    | string           | —                                | —           |
-| disabled      | si esta deshabilitado                    | boolean          | —                                | false       |
-| size          | tamaño del input, esto no funciona cuando `type` no es textarea | string           | large / medium / small / mini            | —           |
-| prefix-icon   | clase del icono de prefijo               | string           | —                                | —           |
-| suffix-icon   | clase del icono de sufijo                | string           | —                                | —           |
-| rows          | número de filas, sólo funciona cuando `type` es 'textarea'. | number           | —                                | 2           |
-| autosize      | si textarea tiene una altura adaptativa, sólo funciona cuando el`type` es 'textarea'. Puede aceptar un objeto, p. ej. { minRows: 2, maxRows: 6 } | boolean / object | —                                | false       |
-=======
+
 | type          | tipo de input                                                                                                                                    | string           | text, textarea y otros [tipos de entrada nativos](https://developer.mozilla.org/es/docs/Web/HTML/Elemento/input#Form_%3Cinput%3E_types) | text        |
 | value / v-model | valor enlazado                          | boolean / string / number | —                       | —           |
 | maxlength     | igual que `maxlength` en el input nativo                                                                                                         | number           | —                                                                                                                                       | —           |
@@ -602,7 +590,7 @@ export default {
 | suffix-icon   | clase del icono de sufijo                                                                                                                        | string           | —                                                                                                                                       | —           |
 | rows          | número de filas, sólo funciona cuando `type` es 'textarea'.                                                                                      | number           | —                                                                                                                                       | 2           |
 | autosize      | si textarea tiene una altura adaptativa, sólo funciona cuando el`type` es 'textarea'. Puede aceptar un objeto, p. ej. { minRows: 2, maxRows: 6 } | boolean / object | —                                                                                                                                       | false       |
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
+
 | autocomplete  | igual que `autocomplete` en el input nativo                                                                                                      | string           | on/off                                                                                                                                  | off         |
 | auto-complete | @DEPRECATED en el proximo cambio mayor de version                                                                                                | string           | on/off                                                                                                                                  | off         |
 | name          | igual que `name` en el input nativo      | string           | —                                | —           |
@@ -646,25 +634,7 @@ export default {
 
 | Atributo              | Descripción                                                                                                                                        | Tipo                            | Opciones                                                       | Por defecto  |
 | --------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------- | -------------------------------------------------------------- | ------------ |
-<<<<<<< HEAD
-|placeholder| el placeholder del Autocomplete| string | — | — |
-|disabled | si el Autocompete esta deshabilitado  | boolean | — | false|
-| value-key | nombre del campo del objeto de sugerencia del input para la visualización | string | — | value |
-|icon | nombre del icono | string | — | — |
-|value | valor enlazado | string | — | — |
-| debounce | retardo al escribir, en milisegundos | number | — | 300 |
-| placement | ubicación del menú emergente | string | top / top-start / top-end / bottom / bottom-start / bottom-end | bottom-start |
-|fetch-suggestions | un método para obtener las sugerencias del input. Cuando las sugerencias estén listas, invocar `callback(data:[])` para devolverlas a Autocomplete | Function(queryString, callback) | — | — |
-| popper-class | nombre personalizado de clase para el dropdown de autocomplete | string | — | — |
-| trigger-on-focus | si se deben mostrar sugerencias cuando el input obtiene el foco | boolean | — | true |
-| name | igual que `name` en el input nativo | string | — | — |
-| select-when-unmatched | si se emite un evento `select` al pulsar enter cuando no hay coincidencia de Autocomplete | boolean | — | false |
-| label | texto de la etiqueta | string | — | — |
-| prefix-icon | prefix icon class | string | — | — |
-| suffix-icon | suffix icon class | string | — | — |
-| hide-loading | si se debe ocultar el icono de loading en la búsqueda remota | boolean | — | false |
-| popper-append-to-body | si añadir el desplegable al cuerpo. Si la posición del menú desplegable es incorrecta, puede intentar establecer este prop a false | boolean | - | true |
-=======
+
 | placeholder           | el placeholder del Autocomplete                                                                                                                    | string                          | —                                                              | —            |
 | disabled              | si el Autocompete esta deshabilitado                                                                                                               | boolean                         | —                                                              | false        |
 | value-key             | nombre del campo del objeto de sugerencia del input para la visualización                                                                          | string                          | —                                                              | value        |
@@ -684,7 +654,7 @@ export default {
 | popper-append-to-body | si añadir el desplegable al cuerpo. Si la posición del menú desplegable es incorrecta, puede intentar establecer este prop a false                 | boolean                         | -                                                              | true         |
 | validate-event        | si se debe lanzar la validación de formulario                                                                                                                 | boolean                         | -                                                   | true         |
 | highlight-first-item | si se debe resaltar el primer elemento en las sugerencias de búsqueda remota de forma predeterminada                 | boolean                         | -                                                              | false         |
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
+
 
 ### Autocomplete Slots
 

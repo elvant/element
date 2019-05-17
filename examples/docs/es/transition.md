@@ -151,31 +151,4 @@ import Vue from 'vue'
 
 Vue.component(CollapseTransition.name, CollapseTransition)
 ```
-<<<<<<< HEAD
 
-<style>
-  .transition-box {
-    margin-bottom: 10px;
-    width: 200px;
-    height: 100px;
-    border-radius: 4px;
-    background-color: #1890ff;
-    text-align: center;
-    color: #fff;
-    padding: 40px 20px;
-    margin-right: 20px;
-    box-sizing: border-box;
-  }
-</style>
-
-<script>
-  module.exports = {
-    data: () => ({
-      show: true,
-      show2: true,
-      show3: true
-    })
-  }
-</script>
-=======
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5

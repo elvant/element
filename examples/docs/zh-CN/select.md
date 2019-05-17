@@ -526,13 +526,10 @@
 | multiple | 是否多选 | boolean | — | false |
 | disabled | 是否禁用 | boolean | — | false |
 | value-key | 作为 value 唯一标识的键名，绑定值为对象类型时必填 | string | — | value |
-<<<<<<< HEAD
 | size | 输入框尺寸 | string | large/small/mini | — |
 | clearable | 单选时是否可以清空选项 | boolean | — | false |
-=======
 | size | 输入框尺寸 | string | medium/small/mini | — |
 | clearable | 是否可以清空选项 | boolean | — | false |
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 | collapse-tags | 多选时是否将选中值按文字的形式展示 | boolean | — | false |
 | multiple-limit | 多选时用户最多可以选择的项目数，为 0 则不限制 | number | — | 0 |
 | name | select input 的 name 属性 | string | — | — |

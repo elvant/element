@@ -1,28 +1,4 @@
-<<<<<<< HEAD
-<script>
-export default {
-  data() {
-    return {
-      percentage: 100,
-      gvalue1: ['#3aeabb', '#fdd250', '#ff1e41', '#4ac5f8']
-    };
-  }
-}
-</script>
-<style>
-  .demo-box.demo-progress {
-    .el-progress--line {
-      margin-bottom: 15px;
-      width: 350px;
-    }
-    .el-progress--circle {
-      margin-right: 15px;
-    }
-  }
-</style>
 
-=======
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 ## Progress 进度条
 
 用于展示操作进度，告知用户当前状态和预期。
@@ -70,19 +46,8 @@ export default {
 
 :::demo Progress 组件可通过 `gradient` 属性来指定使用环形进度条渐变颜色。
 ```html
-<template>
-  <el-progress type="circle" :gradient="gvalue1" :percentage="percentage" ></el-progress>
-</temaplte>
-<script>
-export default {
-  data() {
-    return {
-      percentage: 100,
-      gvalue1: ['#3aeabb', '#fdd250', '#ff1e41', '#4ac5f8']
-    };
-  }
-}
-</script>
+<el-progress type="circle" :gradient="['#3aeabb', '#fdd250', '#ff1e41', '#4ac5f8']" :percentage="100" ></el-progress>
+
 ```
 :::
 

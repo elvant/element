@@ -110,24 +110,16 @@ Vue.use(ElementUI)
 Si esta utilizando `babel-plugin-component` para importar bajo demanda, solo debe modificar el archivo `.babelrc` y especificar en la propiedad `styleLibraryName` la ruta en donde se encuentra localizado su tema personalizado relativo a `.babelrc`. **Nota** el carácter `~` es obligatorio:
 ```json
 {
-<<<<<<< HEAD
-  "plugins": [["component", [
-    {
-      "libraryName": "elvant",
-      "styleLibraryName": "~theme"
-    }
-  ]]]
-=======
+
   "plugins": [
     [
       "component",
       {
-        "libraryName": "element-ui",
+        "libraryName": "elvant",
         "styleLibraryName": "~theme"
       }
     ]
   ]
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
 }
 ```
 

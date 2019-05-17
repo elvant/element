@@ -163,10 +163,6 @@
 </div>
 
 <script>
-<<<<<<< HEAD
-  import { addClass } from 'elvant/src/utils/dom';
-=======
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
   export default {
     data() {
       return {

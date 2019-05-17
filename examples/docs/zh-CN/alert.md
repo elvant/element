@@ -258,13 +258,11 @@ Alert 组件提供了两个不同的主题：`light`和`dark`。
 | center | 文字是否居中 | boolean | — | true |
 | close-text | 关闭按钮自定义文本 | string | — | — |
 | show-icon | 是否显示图标 | boolean | — | false |
-<<<<<<< HEAD
 | banner | 是否用作顶部公告 | boolean | — | false |
-=======
 | effect | 选择提供的主题 | string | light/dark | light |
 
 ### Slot
->>>>>>> 16a6059ed893c01244c7b59f1e4e9d398c2df3d5
+
 
 | Name | Description |
 |------|--------|
