@@ -22,7 +22,7 @@
     .container {
       height: 100%;
       box-sizing: border-box;
-      border-bottom: 1px solid #DCDFE6;
+      // border-bottom: 1px solid #DCDFE6;
     }
 
     .nav-lang-spe {
