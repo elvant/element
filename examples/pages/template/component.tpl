@@ -217,7 +217,7 @@
   import bus from '../../bus';
   import navsData from '../../nav.config.json';
   import throttle from 'throttle-debounce/throttle';
-   export default {
+  export default {
     data() {
       return {
         lang: this.$route.meta.lang,
