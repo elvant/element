@@ -9,6 +9,7 @@ import MainFooter from './components/footer';
 import MainHeader from './components/header';
 import SideNav from './components/side-nav';
 import FooterNav from './components/footer-nav';
+import IconSet from './components/IconSet';
 import title from './i18n/title';
 
 import 'packages/theme-antd/src/index.scss';
@@ -23,6 +24,7 @@ Vue.component('demo-block', demoBlock);
 Vue.component('main-footer', MainFooter);
 Vue.component('main-header', MainHeader);
 Vue.component('side-nav', SideNav);
+Vue.component('IconSet', IconSet);
 Vue.component('footer-nav', FooterNav);
 
 const globalEle = new Vue({
