@@ -1,6 +1,6 @@
-<style lang="css">
-  @import 'highlight.js/styles/color-brewer.css';
-  @import 'assets/styles/common.css';
+<style lang="scss">
+  @import '~highlight.js/styles/color-brewer.css';
+  @import 'assets/styles/common.scss';
   @import 'assets/styles/fonts/style.css';
 
   html, body {
@@ -11,9 +11,6 @@
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
 
-    &.is-component {
-      /* overflow: hidden; */
-    }
   }
 
   #app {
@@ -90,7 +87,6 @@
 
   .page-container {
     padding-top: 55px;
-
     h2 {
       font-size: 28px;
       color: #1f2d3d;

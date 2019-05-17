@@ -1,5 +1,5 @@
 <style>
-  .page-component__scroll {
+ .page-component__scroll {
     height: calc(100% - 80px);
     margin-top: 80px;
 
@@ -188,23 +188,18 @@
   }
 </style>
 <template>
-  <!-- <el-scrollbar class="page-component__scroll" ref="componentScrollBar">
-  </el-scrollbar> -->
   <div class="page-container page-component">
-
-<el-row>
-  <el-col class="main-menu" :xs="24" :sm="24" :md="24" :lg="6" :xl="5" :xxl="4" >
-    <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
-  </el-col>
-  <el-col class="main-container" :xs="24" :sm="24" :md="24" :lg="18" :xl="19" :xxl="20">
-    <div class="page-component__content">
-      <router-view class="content"></router-view>
-      <footer-nav></footer-nav>
-    </div>
-  </el-col>
-</el-row>
-    <!-- <el-scrollbar class="page-component__nav">
-    </el-scrollbar> -->
+    <el-row>
+      <el-col class="main-menu" :xs="24" :sm="24" :md="24" :lg="6" :xl="5" :xxl="4" >
+        <side-nav :data="navsData[lang]" :base="`/${ lang }/component`"></side-nav>
+      </el-col>
+      <el-col class="main-container" :xs="24" :sm="24" :md="24" :lg="18" :xl="19" :xxl="20">
+        <div class="page-component__content">
+          <router-view class="content"></router-view>
+          <footer-nav></footer-nav>
+        </div>
+      </el-col>
+    </el-row>
     <transition name="back-top-fade">
       <div
         class="page-component-up"
@@ -222,8 +217,7 @@
   import bus from '../../bus';
   import navsData from '../../nav.config.json';
   import throttle from 'throttle-debounce/throttle';
-
-  export default {
+   export default {
     data() {
       return {
         lang: this.$route.meta.lang,

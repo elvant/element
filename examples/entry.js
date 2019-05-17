@@ -2,7 +2,6 @@ import Vue from 'vue';
 import entry from './app';
 import VueRouter from 'vue-router';
 import Element from 'main/index.js';
-import 'packages/theme-antd/src/index.scss';
 import hljs from 'highlight.js';
 import routes from './route.config';
 import demoBlock from './components/demo-block';
@@ -14,7 +13,7 @@ import title from './i18n/title';
 
 import 'packages/theme-antd/src/index.scss';
 import './demo-styles/index.scss';
-import './assets/styles/common.css';
+import './assets/styles/common.scss';
 import './assets/styles/fonts/style.css';
 import icon from './icon.json';
 
