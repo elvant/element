@@ -894,6 +894,7 @@ $--tooltip-padding: 10px !default;
 -------------------------- */
 $--tag-padding: 0 10px !default;
 $--tag-fill: rgba($--color-primary, 0.10) !default;
+$--tag-color: $--color-primary !default;
 /// color||Color|0
 $--tag-font-color: $--color-primary !default;
 /// color||Color|0
@@ -923,7 +924,6 @@ $--tag-danger-fill: rgba($--color-danger, 0.10) !default;
 $--tag-danger-border: rgba($--color-danger, 0.20) !default;
 $--tag-danger-color: $--color-danger !default;
 
-$--tag-color: #ccc;
 
 /* Tree
 -------------------------- */

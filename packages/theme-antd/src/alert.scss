@@ -61,6 +61,9 @@
     background-color: $--alert-info-color;
     border-color: $--alert-info-border-color;
     color: $--color-info;
+    .el-alert__description {
+      color: $--color-info;
+    }
     &.is-light {
       background-color: $--alert-info-color;
       color: $--color-info;
