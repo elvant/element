@@ -124,7 +124,11 @@ const webpackConfig = {
     })
   ],
   optimization: {
-    minimizer: []
+    minimizer: [],
+    splitChunks: {
+      // include all types of chunks
+      chunks: 'all'
+    }
   },
   devtool: '#eval-source-map'
 };
@@ -138,12 +142,6 @@ if (isProd) {
   webpackConfig.plugins.push(
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash:7].css'
-    }),
-    new webpack.DefinePlugin({
-      'process.env.NODE_ENV': JSON.stringify('production')
-    }),
-    new webpack.optimize.CommonsChunkPlugin({
-      name: ['elvant', 'manifest']
     })
   );
   webpackConfig.optimization.minimizer.push(
