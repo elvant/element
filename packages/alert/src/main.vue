@@ -2,7 +2,7 @@
   <transition name="el-alert-fade">
     <div
       class="el-alert"
-      :class="[typeClass, center ? 'is-center' : '', banner ? 'el-alert--banner' : '']"
+      :class="[typeClass, center ? 'is-center' : '', banner ? 'el-alert--banner' : '', 'is-' + effect]"
       v-show="visible"
       role="alert"
     >
