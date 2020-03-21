@@ -220,6 +220,8 @@ Dialog 的内容是懒渲染的，即在第一次被打开之前，传入的默�
 | before-close | 关闭前的回调，会暂停 Dialog 的关闭 | function(done)，done 用于关闭 Dialog | — | — |
 | center | 是否对头部和底部采用居中布局 | boolean | — | false |
 | border | 是否显示Dialog header和footer边框，默认显示 | boolean | — | true |
+| destroy-on-close | 关闭时销毁 Dialog 中的元素 | boolean | — | false |
+
 ### Slot
 | name | 说明 |
 |------|--------|

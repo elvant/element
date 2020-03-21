@@ -269,6 +269,7 @@ Display Alert as a banner at top of page.
 
 | Name | Description |
 |------|--------|
+| — | description |
 | title | content of the Alert title |
 
 ### Events

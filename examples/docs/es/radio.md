@@ -178,7 +178,7 @@ Radio con estilo de botón.
 | disabled | si el Radio está deshabilitado           | boolean                   | —                     | false       |
 | border   | agregar borde alrededor del elemento Radio | boolean                   | —                     | false       |
 | size     | tamaño del elemento Radio, solo funciona si `border` es verdadero | string                    | large / medium / small / mini | —           |
-| name     | atributo nativo 'name'                   | string                    | —                     | —           |
+| name     | atributo nativo `name`                 | string                    | —                     | —           |
 
 ### Atributos de Radio-button
 
@@ -186,7 +186,7 @@ Radio con estilo de botón.
 | -------- | ------------------------------ | --------------- | ---------------- | ----------- |
 | label    | el valor del Radio             | string / number | —                | —           |
 | disabled | si el Radio está deshabilitado | boolean         | —                | false       |
-| name     | atributo nativo 'name'         | string          | —                | —           |
+| name     | atributo nativo `name`         | string          | —                | —           |
 
 ### Atributos de Radio-group
 
@@ -194,7 +194,12 @@ Radio con estilo de botón.
 | ---------- | ---------------------------------------- | ------- | --------------------- | ------------------- |
 | size       | tamaño de los `radio buttons` o `bordered radios` | string  | large / medium / small / mini | —                   |
 | value / v-model | valor enlazado | string / number / boolean | — | — |
+<<<<<<< HEAD
 | disabled   | si la anidación de radios está desahabilitada | boolean | —                     | false               |
+=======
+| size       | tamaño de los `radio buttons` o `bordered radios` | string  | medium / small / mini | —                   |
+| disabled   | si la anidación de radios está deshabilitada | boolean | —                     | false               |
+>>>>>>> 6ec5f8e900ff698cf30e9479d692784af836a108
 | text-color | color de las letras cuando el botón está activo | string  | —                     | #ffffff             |
 | fill       | color del borde y fondo cuando el botón está activo | string  | —                     | #1890ff             |
 

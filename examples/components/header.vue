@@ -309,8 +309,7 @@
             </router-link>
           </li>
           <li 
-            class="nav-item"
-            v-if="$isEle"
+            class="nav-item nav-item-theme"
           >
             <router-link
               active-class="active"
@@ -377,11 +376,6 @@
               </el-dropdown-menu>
             </el-dropdown>
           </li>
-          
-          <!--theme picker-->
-          <li class="nav-item nav-theme-switch" v-show="isComponentPage">
-            <theme-picker v-if="!$isEle"></theme-picker>
-          </li>
         </ul>
       </div>
     </header>
@@ -393,7 +387,7 @@
   import compoLang from '../i18n/component.json';
   import Element from 'main/index.js';
   import themeLoader from './theme/loader';
-  import { getVars } from './theme/loader/api.js';
+  import { getTestEle } from './theme/loader/api.js';
   import bus from '../bus';
   import { ACTION_USER_CONFIG_UPDATE } from './theme/constant.js';
 
@@ -438,14 +432,26 @@
       }
     },
     mounted() {
-      getVars()
+      getTestEle()
         .then(() => {
           this.$isEle = true;
-          ga('send', 'event', 'DocView', 'Inner');
+          ga('send', 'event', 'DocView', 'Ele', 'Inner');
         })
         .catch((err) => {
+          ga('send', 'event', 'DocView', 'Ele', 'Outer');
           console.error(err);
         });
+  
+      const testInnerImg = new Image();
+      testInnerImg.onload = () => {
+        this.$isEle = true;
+        ga('send', 'event', 'DocView', 'Ali', 'Inner');
+      };
+      testInnerImg.onerror = (err) => {
+        ga('send', 'event', 'DocView', 'Ali', 'Outer');
+        console.error(err);
+      };
+      testInnerImg.src = `https://private-alipayobjects.alipay.com/alipay-rmsdeploy-image/rmsportal/VmvVUItLdPNqKlNGuRHi.png?t=${Date.now()}`;
     },
     methods: {
       switchVersion(version) {

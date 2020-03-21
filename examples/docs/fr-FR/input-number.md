@@ -4,7 +4,7 @@ Un champ d'input de valeurs numériques, avec un domaine personnalisable.
 
 ### Usage
 
-:::demo Liez une variable à `v-model` dans l'element `<el-input-number>` et c'est tout !
+:::demo Liez une variable à `v-model` dans l'élément `<el-input-number>` et c'est tout !
 
 ```html
 <template>
@@ -111,7 +111,7 @@ Vous pouvez déterminer un pas pour le champs.
 :::
 
 :::tip
-La valeur de `precision` doit être un integer non-négatif et ne doit pas être inférieure aux décimales de `step`.
+La valeur de `precision` doit être un integer non négatif et ne doit pas être inférieure aux décimales de `step`.
 :::
 
 ### Taille
@@ -188,7 +188,7 @@ Utilisez l'attribut `size` pour régler la taille avec `medium`, `small` ou `min
 
 | Nom | Description | Paramètres |
 |----| ---- | -----|
-| change | Se déclenche quand la valeur change. | La nouvelle valeur. |
+| change | Se déclenche quand la valeur change. | currentValue, oldValue |
 | blur | Se déclenche quand le champ perds le focus. | (event: Event) |
 | focus | Se déclenche quand le champ a le focus. | (event: Event) |
 

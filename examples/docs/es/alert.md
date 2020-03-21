@@ -271,6 +271,7 @@ Mostrar alerta como un banner en la parte superior de la página.
 
 | Name | Description |
 |------|--------|
+| — | descripción |
 | title | El contenido del título de alerta. |
 
 ### Eventos

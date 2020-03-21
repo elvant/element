@@ -131,12 +131,11 @@ We have collected some [frequently asked questions](https://github.com/Elvant/el
 Please make sure to read the contributing guide ([中文](https://github.com/ElemeFE/element/blob/master/.github/CONTRIBUTING.zh-CN.md) | [English](https://github.com/ElemeFE/element/blob/master/.github/CONTRIBUTING.en-US.md) | [Español](https://github.com/ElemeFE/element/blob/master/.github/CONTRIBUTING.es.md) | [Français](https://github.com/ElemeFE/element/blob/master/.github/CONTRIBUTING.fr-FR.md)) before making a pull request.
 
 
+## Join Discussion Group
 
-## Join Discusion Group
+Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discussion group :
 
-Scan the QR code using [Dingtalk App](https://www.dingtalk.com/) to join in discusion group :
-
-<img alt="Join Discusion Group" src="https://user-images.githubusercontent.com/17680888/54505885-e3e54c00-4974-11e9-94b9-4c13644fcd98.png" width="300">
+<img alt="Join Discusion Group" src="https://user-images.githubusercontent.com/17680888/66537329-9a4b9100-eb52-11e9-9d99-65469cfdae58.jpeg" width="300">
 
 
 ## LICENSE

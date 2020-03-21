@@ -2,7 +2,7 @@
 
 ### npm
 
-Instalar mediante npm es la forma recomendada ya que se integra facilmente con [webpack](https://webpack.js.org/).
+Instalar mediante npm es la forma recomendada ya que se integra fácilmente con [webpack](https://webpack.js.org/).
 
 ```shell
 npm i elvant -S
@@ -28,4 +28,4 @@ Si esta usando un CDN, una página con Hello-World es fácil con Element. [Onlin
 
 <iframe width="100%" height="600" src="//jsfiddle.net/icai/0rLkz687/embedded/html,result/" allowpaymentrequest allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
-Si esta usando npm y desea combinarlo con webpack, por favor continue a la siguiente página: [Quick Start](/#/es/component/quickstart)
+Si esta usando npm y desea combinarlo con webpack, por favor continué a la siguiente página: [Quick Start](/#/es/component/quickstart)

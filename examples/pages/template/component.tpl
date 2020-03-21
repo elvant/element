@@ -3,7 +3,7 @@
     height: calc(100% - 80px);
     margin-top: 80px;
 
-    .el-scrollbar__wrap {
+    > .el-scrollbar__wrap {
       overflow-x: auto;
     }
   }
@@ -24,8 +24,9 @@
       margin-top: 80px;
       transition: padding-top .3s;
 
-      .el-scrollbar__wrap {
+      > .el-scrollbar__wrap {
         height: 100%;
+        overflow-x: auto;
       }
 
       &.is-extended {
@@ -120,38 +121,6 @@
         }
       }
     }
-
-    .page-component-up {
-      background-color: #fff;
-      position: fixed;
-      right: 100px;
-      bottom: 150px;
-      width: 40px;
-      height: 40px;
-      size: 40px;
-      border-radius: 20px;
-      cursor: pointer;
-      transition: .3s;
-      box-shadow: 0 0 6px rgba(0,0,0, .12);
-      z-index: 5;
-
-      i {
-        color: #409EFF;
-        display: block;
-        line-height: 40px;
-        text-align: center;
-        font-size: 18px;
-      }
-
-      &.hover {
-        opacity: 1;
-      }
-    }
-    .back-top-fade-enter,
-    .back-top-fade-leave-active {
-      transform: translateY(-30px);
-      opacity: 0;
-    }
   }
 
   @media (max-width: 768px) {
@@ -180,9 +149,6 @@
       .content > table {
         overflow: auto;
         display: block;
-      }
-      .page-component-up {
-        display: none;
       }
     }
   }
@@ -222,8 +188,6 @@
       return {
         lang: this.$route.meta.lang,
         navsData,
-        hover: false,
-        showBackToTop: false,
         scrollTop: 0,
         showHeader: true,
         componentScrollBar: null,
@@ -263,15 +227,9 @@
           }, 50);
         }
       },
-      toTop() {
-        this.hover = false;
-        this.showBackToTop = false;
-        this.componentScrollBox.scrollTop = 0;
-      },
 
       handleScroll() {
         const scrollTop = this.componentScrollBox.scrollTop;
-        this.showBackToTop = scrollTop >= 0.5 * document.body.clientHeight;
         if (this.showHeader !== this.scrollTop > scrollTop) {
           this.showHeader = this.scrollTop > scrollTop;
         }
@@ -282,6 +240,11 @@
           // bus.$emit('fadeNav');
         }
         this.scrollTop = scrollTop;
+      }
+    },
+    computed: {
+      showBackToTop() {
+        return !this.$route.path.match(/backtop/);
       }
     },
     created() {
@@ -308,11 +271,14 @@
     beforeRouteUpdate(to, from, next) {
       next();
       setTimeout(() => {
-        if (location.href.match(/#/g).length < 2) {
+        const toPath = to.path;
+        const fromPath = from.path;
+        if (toPath === fromPath && to.hash) {
+          this.goAnchor();
+        }
+        if (toPath !== fromPath) {
           document.documentElement.scrollTop = document.body.scrollTop = 0;
           this.renderAnchorHref();
-        } else {
-          this.goAnchor();
         }
       }, 100);
     }

@@ -87,7 +87,7 @@ Botones sin borde ni fondo.
 
 Use iconos para darle mayor significado a Button. Se puede usar simplemente un icono o un icono con texto.
 
-:::demo Use el atributo `icon` para agregar un icono. Puede encontrar el listado de iconos en el componente de iconos. Agregar iconos a la derecha del texto se puede conseguir con un tag `<i>`. También se pueden usar iconos custom.
+:::demo Use el atributo `icon` para agregar un icono. Puede encontrar el listado de iconos en el componente de iconos. Agregar iconos a la derecha del texto se puede conseguir con un tag `<i>`. También se pueden usar iconos personalizados.
 
 ```html
 <el-button type="primary" icon="el-icon-edit"></el-button>
@@ -159,9 +159,10 @@ Además del tamaño por defecto, el componente Button provee tres tamaños adici
 | type        | tipo de botón                                 | string  | primary / success / warning / danger / info / text | —           |
 | plain       | determinar si es o no un botón plano          | boolean | —                                                  | false       |
 | round       | determinar si es o no un botón redondo        | boolean | —                                                  | false       |
-| circle      | determina si es un boton circular             | boolean | —                                                  | false       |
+| circle      | determina si es un botón circular             | boolean | —                                                  | false       |
 | loading     | determinar si es o no un botón de descarga    | boolean | —                                                  | false       |
 | disabled    | deshabilitar el botón                         | boolean | —                                                  | false       |
 | icon        | nombre de la clase del icono                  | string  | —                                                  | —           |
 | autofocus   | misma funcionalidad que la nativa `autofocus` | boolean | —                                                  | false       |
 | native-type | misma funcionalidad que la nativa `type`      | string  | button / submit / reset                            | button      |
+
