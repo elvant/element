@@ -2,8 +2,8 @@
 <ul class="icon-list">
   <li v-for="name in icons[catigory]" :key="name">
     <span>
-      <i :class="'anticon-' + name"></i>
-      <span class="icon-name">{{'anticon-' + name}}</span>
+      <i :class="'ant-' + name"></i>
+      <span class="icon-name">{{'ant-' + name}}</span>
     </span>
   </li>
 </ul>

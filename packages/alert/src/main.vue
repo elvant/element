@@ -21,17 +21,17 @@
 
 <script type="text/babel">
   const TYPE_CLASSES_MAP = {
-    success: 'success anticon-check-circle',
-    info: 'info anticon-info-circle',
-    warning: 'warning anticon-exclamation-circle',
-    error: 'error anticon-cross-circle'
+    success: 'success ant-check-circle',
+    info: 'info ant-info-circle',
+    warning: 'warning ant-exclamation-circle',
+    error: 'error ant-cross-circle'
   };
 
   const TYPE_CLASSES_MAP2 = {
-    success: 'success anticon-check-circle-o',
-    info: 'info anticon-info-circle-o',
-    warning: 'warning anticon-exclamation-circle-o',
-    error: 'error anticon-cross-circle-o'
+    success: 'success ant-check-circle-o',
+    info: 'info ant-info-circle-o',
+    warning: 'warning ant-exclamation-circle-o',
+    error: 'error ant-cross-circle-o'
   };
 
   export default {

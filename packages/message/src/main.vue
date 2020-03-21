@@ -26,10 +26,10 @@
 
 <script type="text/babel">
   const typeMap = {
-    success: 'success anticon-check-circle',
-    info: 'info anticon-info-circle',
-    warning: 'warning anticon-exclamation-circle',
-    error: 'error anticon-cross-circle'
+    success: 'success ant-check-circle',
+    info: 'info ant-info-circle',
+    warning: 'warning ant-exclamation-circle',
+    error: 'error ant-cross-circle'
   };
 
   export default {
